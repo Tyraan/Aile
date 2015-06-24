@@ -12,10 +12,23 @@
 */
 
 Route::get('/', 'WelcomeController@index');
-
 Route::get('home', 'HomeController@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
+{
+  Route::get('/', 'AdminHomeController@index');
+});
+
+Route::group(['prefix'=>"admin",'namespace'=>"Admin"],function()
+{
+	Route::resource('pages','PagesController');
+});
+
+
+
