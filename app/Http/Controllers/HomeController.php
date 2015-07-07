@@ -1,7 +1,7 @@
 <?php namespace App\Http\Controllers;
-use App\Page;
 
 class HomeController extends Controller {
+
 	/*
 	|--------------------------------------------------------------------------
 	| Home Controller
@@ -20,7 +20,7 @@ class HomeController extends Controller {
 	 */
 	public function __construct()
 	{
-		
+		$this->middleware('auth');
 	}
 
 	/**
@@ -30,7 +30,7 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home')->withPages(Page::all());
+		return view('home')->with('Pages',Page::all());
 	}
 
 }
