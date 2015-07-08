@@ -30,7 +30,11 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
+<<<<<<< HEAD
+		return view('home');
+=======
 		return view('home')->with('Pages',Page::all());
+>>>>>>> parent of 4827d3e... mistake
 	}
 
 }
