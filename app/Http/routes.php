@@ -10,27 +10,16 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('/','WelcomeController@index');
+Route::get('home','HomeController@index');
 
-
-Route::get('/', 'HomeController@index');
-Route::get('home', 'HomeController@index');
-
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
-
-
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function()
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middlewire'=>'auth'], function()
 {
   Route::get('/', 'AdminHomeController@index');
+  Route::resource('pages','PagesController');
 });
 
-Route::group(['prefix'=>"admin",'namespace'=>"Admin"],function()
-{
-	Route::resource('pages','PagesController');
-});
-
-//Route::gourp('findus',"FindAileController");
-
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
