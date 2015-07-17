@@ -21,24 +21,24 @@
                 <ul>
                     <li class="sy_jianaile3">
                         <a href="/news/index.html" target="_blank">
-                            <span class="sy_jmal"><img src="/templates/default/images/sy_tb4.png"></span>
+                            <span class="sy_jmal"><img src="/img/sy_tb4.png"></span>
                             <span class="sy_jmxai">
-          <img src="/templates/default/images/sy_xiwen.png" border="0">         </span> </a>
+          <img src="/img/sy_xiwen.png" border="0">         </span> </a>
                     </li>
                     <li class="sy_jianaile1">
                         <a href="/mfstlv/index.html" target="_blank">
-                            <span class="sy_jmal"><img src="/templates/default/images/sy_tb2.png"></span>
-                            <span class="sy_jmxai"><img src="/templates/default/images/sy_kecty.png" border="0"></span> </a>
+                            <span class="sy_jmal"><img src="/img/sy_tb2.png"></span>
+                            <span class="sy_jmxai"><img src="/img/sy_kecty.png" border="0"></span> </a>
                     </li>
                     <li class="sy_jianaile2">
                         <a href="http://www.ilovegym.cn/actions.php?do=chengdulexiang&sno=401" target="_blank">
-                            <span class="sy_jmal"><img src="/templates/default/images/sy_tb3.png"></span>
-                            <span class="sy_jmxai"><img src="/templates/default/images/mhpaide.png" border="0"></span> </a>
+                            <span class="sy_jmal"><img src="/img/sy_tb3.png"></span>
+                            <span class="sy_jmxai"><img src="/img/mhpaide.png" border="0"></span> </a>
                     </li>
                     <li class="sy_jianaile">
                         <a href="/jiameng/index.html" target="_blank">
-                            <span class="sy_jmal"><img src="/templates/default/images/sy_tb1.png"></span>
-                            <span class="sy_jmxai"><img src="/templates/default/images/sy_jmeng.png" border="0"></span> </a>
+                            <span class="sy_jmal"><img src="/img/sy_tb1.png"></span>
+                            <span class="sy_jmxai"><img src="/img/sy_jmeng.png" border="0"></span> </a>
                     </li>
                 </ul>
             </div>

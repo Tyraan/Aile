@@ -1,0 +1,20 @@
+.abc{ width:250px;}
+.abc_ai_bbnl{ width:220px; font-size:12px; color:#181818; font-family:"Microsoft YaHei"; height:26px; line-height:26px;}
+
+.selce12{ width:auto; height:38px;}
+.boox{
+	position:relative;
+	float:left;
+}
+.box_content{
+    padding:10px;
+	border:1px solid #ccc;
+	box-shadow:0 0 5px #ccc;
+	border-radius: 5px;
+	overflow:hidden;
+}
+.box_content img{
+	width:190px;
+	height:126px;
+	
+}

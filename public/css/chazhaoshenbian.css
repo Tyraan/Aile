@@ -1,0 +1,65 @@
+/* CSS Document */
+
+/*  right */
+
+.right {
+	width:734px;
+	position: relative;
+	height:897px;
+	overflow: hidden; 
+}
+.right1{width:714px;}
+
+/*  china */
+
+#china0 {
+	width: 734px;
+	height: 1197px;
+	position: relative;
+	
+	padding-bottom:50px;
+	margin:0 auto;
+	font-family:"Î¢ÈíÑÅºÚ";
+	}
+.china0 {
+	width: 734px;
+	height: 1197px;
+	 no-repeat ;
+	position: relative;
+	margin-left:30px;
+	padding-bottom:50px;
+}
+
+.china0_top{
+    width: 400px;
+    height: 274px;
+	margin:0 auto;
+	
+	}
+.china0_main{
+ width: 732px;
+    height: 794px;
+	margin:0 auto;
+}
+.china0_main_1{width: 240px;
+    height: 620px; float:left}
+	
+.china0_main_1_t{width: 240px; height:380px;}
+.china0_main_1_m{width: 240px; height:100px;}	
+.china0_main_1_b{width: 240px; height:350px;}	
+
+
+.china0_main_2_t{width: 240px; height:90px;}
+.china0_main_2_m{width: 240px; height:140px;}
+.china0_main_2_m2{width: 240px; height:90px;}	
+.china0_main_2_m3{width: 240px; height:130px;}	
+.china0_main_2_b{width: 240px; height:150px;}	
+
+.cm1{ width:200px; height:24px; color:#009e3b; font-family:"Î¢ÈíÑÅºÚ"; font-size:18px; font-weight:bolder}
+	
+.border0{width: 200px;
+    height: 8px; border-bottom:#666666 1px solid; font-family:"Î¢ÈíÑÅºÚ"; margin-bottom:5px}
+.china0_main_1m{width: 240px;display:block}
+.china0_main_2m{width: 240px;display:block}
+.china0_main_1m_l{width: 57px;font-family:"Î¢ÈíÑÅºÚ";  float:left;line-height:22px; font-size:14px; color:#424242; font-weight:bolder}
+.china0_main_1m_r{width: 176px; font-family:"Î¢ÈíÑÅºÚ"; float:left; line-height:25px; color:#676767}

@@ -1,7 +1,7 @@
 <div class="ai_banqian_da">
         <div class="ai_banqian">
             <div class="ai_banuk">
-                <img src="/templates/default/images/ilovegym.png">
+                <img src="/img/ilovegym.png">
             </div>
             <div class="ai_banuh">
                 <div class="ai_ilove">
@@ -14,7 +14,7 @@
                         <li><a target="_blank" href="/chuqu/index.html">厨趣课程</a></li>
                         <li><a target="_blank" href="/englishcourse/index.html">英语课程</a></li>
                         <li><a target="_blank" href="/WaterGym/index.html">水育课程</a></li>
-                    </ul>
+                    </ul>                    
                     <ul class="ai_ilove3 ai_ilove5">
                         <li class="ai_biei">爱乐派对</li>
                         <li><a href="/party/1414403994.html">公主主题</a></li>
@@ -74,24 +74,24 @@
                 <div class="ai_ilove2">
                     <ul class="ai_ilove3 ai_ilove8">
                         <div class="alck_ewm1" id="alck_ewm2">
-                            <img src="/templates/default/images/er_wei_ma.jpg" width="250" height="250">
+                            <img src="/img/er_wei_ma.jpg" width="250" height="250">
                         </div>
-                        <li class="ai_biei">Find us on </li>
+                        <li class="ai_biei">Find us </li>
                         <table width="106" border="0" cellspacing="0" cellpadding="0">
                             <tr>
-                                <th width="43" height="35" align="left" scope="row"><img src="/templates/default/images/weixin.png" width="29" height="24"></th>
+                                <th width="43" height="35" align="left" scope="row"><img src="/img/weixin.png" width="29" height="24"></th>
                                 <td width="63"><a href="#" onMouseOver="tcc_show1()" onMouseOut="tcc_show1()">微信</a></td>
                             </tr>
                             <tr>
-                                <th height="35" align="left" scope="row"><img src="/templates/default/images/qwibo.png" width="26" height="22"></th>
+                                <th height="35" align="left" scope="row"><img src="/img/qwibo.png" width="26" height="22"></th>
                                 <td><a href="http://weibo.com/ilovegymbj" target="_blank">微博</a></td>
                             </tr>
                             <tr>
-                                <th height="35" align="left" scope="row"><img src="/templates/default/images/guge.png" width="26" height="22"></th>
+                                <th height="35" align="left" scope="row"><img src="/img/guge.png" width="26" height="22"></th>
                                 <td height="30"><a href="#">Google+</a></td>
                             </tr>
                             <tr>
-                                <th height="35" align="left" scope="row"><img src="/templates/default/images/FF.png" width="25" height="25"></th>
+                                <th height="35" align="left" scope="row"><img src="/img/FF.png" width="25" height="25"></th>
                                 <td><a href="#" target="_blank">Facebook</a></td>
                             </tr>
                         </table>
@@ -101,8 +101,9 @@
             </div>
             <div class="ai_banquanxx">
                 北京爱乐教育咨询有限公司：伴随着音乐运动，伴随着娱乐成长！这就是爱乐国际早教，全球最受欢迎的儿童教育机构！2009年爱乐中国I Love Gym在北京开设了第一家中心，并引进了Kindermusik。
-                <br/>Copyright &copy; 2015 I Love Gym China. All rights Reserved. 京IPC备10032270号-1 &nbsp;&nbsp; 爱乐国际早教中心 &nbsp;&nbsp;&nbsp;&nbsp;01056626152
+                <br/> Copyright &copy; 2015 I Love Gym China. All rights Reserved. 京IPC备10032270号-1 &nbsp;&nbsp; 爱乐国际早教中心 &nbsp;&nbsp;&nbsp;&nbsp;01056626152
                 
+
             </div>
         </div>
     </div>

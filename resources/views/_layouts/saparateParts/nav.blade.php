@@ -1,4 +1,4 @@
-<link rel="shortcut icon" type="image/x-icon" href="/templates/default/images/aileguoji.ico" media="screen" />
+<link rel="shortcut icon" type="image/x-icon" href="/img/aileguoji.ico" media="screen" />
     <div class="sy_top">
         <div class="sy_top1">
             <div class="hd-main clearfix" id="header">
@@ -24,27 +24,27 @@
                             <div class="content">
                                 <div class="suen_sbea">
                                     <a class="li disk ciauy" href="/music/index.html">
-                                        <span class="icon"><img src="/templates/default/images/sy_sba01.jpg" /></span>
+                                        <span class="icon"><img src="/img/sy_sba01.jpg" /></span>
                                         <span class="text">Kindermuisk课程</span>
                                     </a>
                                     <a class="li tongxunlu" href="/fitbaby/index.html">
-                                        <span class="icon"><img src="/templates/default/images/sy_sba02.jpg" /></span>
+                                        <span class="icon"><img src="/img/sy_sba02.jpg" /></span>
                                         <span class="text">幼儿体适能</span>
                                     </a>
                                     <a class="li xiangce" href="/fitkid/index.html">
-                                        <span class="icon"><img src="/templates/default/images/sy_sba03.jpg" /></span>
+                                        <span class="icon"><img src="/img/sy_sba03.jpg" /></span>
                                         <span class="text">儿童体适能</span>
                                     </a>
                                     <a class="li wenzhang" href="/art/index.html">
-                                        <span class="icon"><img src="/templates/default/images/sy_sba04.jpg" /></span>
+                                        <span class="icon"><img src="/img/sy_sba04.jpg" /></span>
                                         <span class="text">艺术课程</span>
                                     </a>
                                     <a class="li note" href="/cookingfun/index.html">
-                                        <span class="icon"><img src="/templates/default/images/sy_sba05.jpg" /></span>
+                                        <span class="icon"><img src="/img/sy_sba05.jpg" /></span>
                                         <span class="text">厨趣课程</span>
                                     </a>
                                     <a class="li duanxin" href="/letterland/index.html">
-                                        <span class="icon"><img src="/templates/default/images/sy_sba06.jpg" /></span>
+                                        <span class="icon"><img src="/img/sy_sba06.jpg" /></span>
                                         <span class="text">英语课程</span>
                                     </a>
                                 </div>

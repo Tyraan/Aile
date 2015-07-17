@@ -1,0 +1,91 @@
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:10px/180% Arial,Lucida,Verdana,"微软雅黑",Helvetica,sans-serif;color:#333;background:#fff;}
+/* container */
+#container{width:1146px; margin:0 auto; min-width:1146px;}
+#container li{z-index:11;position:relative;}
+.templates li{height:138px;width:145px; display:block;}
+.templates a{display:block;height:138px;text-align:center;width:145px;cursor:pointer;}
+
+.templates img{width:135px;height:128px;}
+.templates .btnLine{position:absolute;bottom:8px;left:6px;right:6px;display:block;}
+.templates .price{font:1.2em/20px Arial;float:right;}
+.be_abea{ width:100%;  min-width:1195px; background:url(../images/alzx_xz_img.jpg) no-repeat top center; height:896px; overflow:hidden;}
+
+.dingwei1{ top:10px;left:330px;}
+.dingwei2{ left:200px; top:-15px;}
+.dingwei3{ left:550px; top:-180px;}
+.dingwei4{ left:745px; top:-395px;}
+.dingwei5{ left:345px; top:-370px;}
+.dingwei6{ left:205px; top:-415px;}
+.dingwei7{ left:-20px; top:-335px;}
+.dingwei8{ left:200px; top:-460px;}
+.dingwei9{ left:540px; top:-610px;}
+.dingwei10{left:780px; top:-860px;}
+.dingwei11{left:990px; top:-1020px;}
+.dingwei12{left:330px; top:-910px;}
+.dingwei13{left:550px; top:-1060px;}
+.dingwei14{left:975px; top:-1210px;}
+.dingwei15{left:140px; top:-1180px;}
+
+.dinwi_a{ width:514px; height:229px; background:url(../images/xwaaa1.png) no-repeat; position: absolute; z-index:999;}
+.dinwi_a1{ width:514px; height:189px;top:10px;left:160px;}
+.dinwi_a2{ width:514px; height:229px; background:url(../images/xwaaa3.png) no-repeat; top:150px; right:-150px;}
+.dinwi_a3{top:50px;left:150px;}
+.dinwi_a4{ background:url(../images/xwaaa2.png) no-repeat; top:-205px; left:-140px;}
+.dinwi_a5{ background:url(../images/xwaaa.png) no-repeat; top:-20px; right:130px;}
+.dinwi_a6{top:60px;left:150px;}
+.dinwi_a7{top:-205px; left:-220px; background:url(../images/xwaaa4.png) no-repeat;}
+.dinwi_a8{top:20px;left:160px;}
+
+.diae_cn{ width:462px; margin:10px auto; height:158px; margin-left:38px;}
+.diae_cn_a{ height:20px;}
+.diae_cn_a ul li{ display:block; float:right;}
+.diae_cn_a ul li.gua_buabe{ height:14px; width:14px; background:url(../images/iw_close1d3.gif) no-repeat;}
+.diae_cn_a ul li.gua_buabe_a{width:72px; background:url(../images/phone.png) no-repeat; display:block; height:14px; margin-right:10px;}
+.diae_cn_b{ height:135px;}
+.diae_cn_bl{ width:154px; height:135px; float:left; background:url(../images/xwaaa5.png) no-repeat;}
+.diae_cn_br{ width:280px; float:right; height:135px;}
+.diae_cn_bc{ font-size:20px; font-family:'微软雅黑'; text-decoration:underline; color:#ff9600; height:30px; line-height:30px; font-weight:bold;}
+.diae_cn_bx{  margin-top:5px;}
+.diae_cnv1{ margin-left:15px;}
+.diae_cn_br a{ width:280px; text-align:left;}
+.diae_cn_bx td{font-size:14px; color:#747474;font-family:'微软雅黑';}
+
+/*天津*/
+.be_abea_tj{ width:100%;  min-width:1195px; background:url(../images/ditu_tianjin.jpg) no-repeat top center; height:896px; overflow:hidden;}
+.tianjin1{ left: 530px; top: 390px;}
+
+/*四川*/
+.be_abea_sc{width:100%;  min-width:1195px; background:url(../images/ditu_sichuan.jpg) no-repeat top center; height:896px; overflow:hidden;}
+.sichuan1{ left: 601px; top: 490px;}
+
+/*湖南*/
+.be_abea_hn{width:100%;  min-width:1195px; background:url(../images/ditu_hunan1.jpg) no-repeat top center; height:896px; overflow:hidden;}
+.hunan2{ left: 633px;top: 255px;}
+.hunan1{ left:200px; top:312px;}
+
+/*云南*/
+.be_abea_yn{width:100%;  min-width:1195px; background:url(../images/ditu_yunnan.jpg) no-repeat top center; height:896px; overflow:hidden;}
+.yunan1{ left: 460px;top: 365px;}
+
+/*广东*/
+.be_abea_gd{width:100%;  min-width:1195px; background:url(../images/ditu_guangdong.jpg) no-repeat top center; height:896px; overflow:hidden;}
+.guangdong1{ top:10px;left:330px;}
+.guangdong2{ left:200px; top:-15px;}
+.guangdong3{ left:550px; top:-180px;}
+
+/*陕西*/
+.be_abea_sxs{width:100%;  min-width:1195px; background:url(../images/ditu_shanxis.jpg) no-repeat top center; height:896px; overflow:hidden;}
+.shanxis1{ left:550px; top:312px}
+
+/*浙江*/
+.be_abea_zj{width:100%;  min-width:1195px; background:url(../images/ditu_zhejiang.jpg) no-repeat top center; height:896px; overflow:hidden;}
+.zhejiang1{ left: 240px;top: 366px}
+
+
+
+
+
+
+

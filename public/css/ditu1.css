@@ -1,0 +1,791 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #888;
+    font-family: "微软雅黑",Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+a {
+    color: #888;
+    text-decoration: none;
+}
+#china a:hover {
+    color: #fff;
+}
+img, li {
+    border: medium none;
+    list-style: none outside none;
+}
+/*  right */
+
+.right {
+	width:734px;
+	position: relative;
+	height:620px;
+	overflow: hidden; 
+}
+.right1{width:714px;}
+
+/*  china */
+
+#china {
+	width: 734px;
+	height: 597px;
+	background: background:url(../images/ditu.png) no-repeat ;
+	position: relative;
+	padding-bottom:50px;
+}
+
+.biat{background:url(../images/ditu.png) no-repeat ;}	
+#china #inlist {
+	width: 330px;
+	height: 125px;
+	position: absolute;
+	top: 50%;
+	margin-top: -70px;
+	left: 50%;
+	margin-left: -200px;
+	z-index: 7;
+	color: #FFF;
+	display: none;
+}
+#china #inlist h4 {
+	font-size: 20px;
+	height: 39px;
+	width: 320px;
+	line-height: 39px;
+	padding-left: 10px;
+	background:url(../images/tchuk.png);
+	position:relative;
+	font-weight:100;
+}
+
+#china #inlist h4 span{ position:absolute; top:0; right:10px; cursor:pointer;}
+
+
+#china #inlist #in {
+	width: 330px;
+	height:107px;
+	text-align: left;
+	background:url(../images/tchukz.png) no-repeat;
+}
+#china #inlist #in span {
+	margin-left: 7px;
+	padding: 5px 3px;
+	display: block;
+	float: left;
+	cursor: pointer;
+	color:#747474;
+	font-size:14px;
+}
+#china dt {
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	background: url(../images/chinabgover.png) no-repeat;
+	z-index: 3;
+}
+#china dt.xinjiang {
+	top:62px;
+	left: 33px;
+	width: 275px;
+	height: 212px;
+	background-position: 0 0;
+}  /* top  -30   left -3*/
+#china dt.xizang {
+	top: 244px;
+	left: 62px;
+	width: 255px;
+	height: 170px;
+	background-position: -560px 0;
+}
+#china dt.neimenggu {
+	top: 13px;
+	left: 303px;
+	width: 290px;
+	height: 250px;
+	background-position: -270px 0;
+}
+#china dt.qinghai {
+	top: 213px;
+	left: 201px;
+	width: 165px;
+	height: 135px;
+	background-position: -820px 0;
+}
+#china dt.sichuan {
+	top: 296px;
+	left: 295px;
+	width: 145px;
+	height: 151px;
+	background-position: 0 -239px;
+}
+#china dt.yunnan {
+	top: 377px;
+	left: 293px;
+	width: 120px;
+	height: 135px;
+	background-position: -150px -239px;
+}
+#china dt.gansu {
+	top: 179px;
+	left: 252px;
+	width: 185px;
+	height: 160px;
+	background-position: -273px -253px;
+}
+#china dt.heilongjiang {
+	top: 7px;
+	left: 537px;
+	width: 170px;
+	height: 150px;
+	background-position: -490px -251px;
+}
+#china dt.jilin {
+	top: 97px;
+	left: 565px;
+	width: 110px;
+	height: 90px;
+	background-position: -692px -237px;
+}
+#china dt.liaoning {
+	top: 153px;
+	left: 548px;
+	width: 95px;
+	height: 75px;
+	background-position: -808px -250px;
+}
+#china dt.hebei {
+	top: 128px;
+	left: 472px;
+	width: 94px;
+	height: 160px;
+	background-position: -892px -205px;
+}
+#china dt.guangxi {
+	top: 415px;
+	left: 387px;
+	width: 100px;
+	height: 90px;
+	background-position: 0 -399px;
+}
+#china dt.guizhou {
+	top: 382px;
+	left: 373px;
+	width: 80px;
+	height: 85px;
+	background-position: -112px -409px;
+}
+#china dt.guangdong {
+	top: 422px;
+	left: 450px;
+	width: 110px;
+	height: 98px;
+	background-position: -232px -398px;
+}
+#china dt.hunan {
+	top: 373px;
+	left: 445px;
+	width: 70px;
+	height: 80px;
+	background-position: -363px -415px;
+}
+#china dt.jiangxi {
+	top: 354px;
+	left: 502px;
+	width: 65px;
+	height: 100px;
+	background-position: -462px -399px;
+}
+#china dt.fujian {
+	top: 391px;
+	left: 534px;
+	background-position: -554px -415px;
+}
+#china dt.zhejiang {
+	top: 340px;
+	left: 554px;
+	background-position: -632px -409px;
+}
+#china dt.chongqing {
+	top: 338px;
+	left: 393px;
+	background-position: -711px -409px;
+}
+#china dt.hubei {
+	top: 310px;
+	left: 437px;
+	width: 100px;
+	height: 78px;
+	background-position: -805px -399px;
+}
+#china dt.ningxia {
+	top: 218px;
+	left: 383px;
+	width: 50px;
+	height: 100px;
+	background-position: -935px -399px;
+}
+#china dt.shaanxi {
+	top: 209px;
+	left: 395px;
+	width: 75px;
+	height: 155px;
+	background-position: 0 -523px;
+}
+#china dt.shanxi {
+	top: 202px;
+	left: 453px;
+	width: 65px;
+	height: 105px;
+	background-position: -147px -535px;
+}
+#china dt.henan {
+	top: 274px;
+	left: 456px;
+	width: 80px;
+	height: 75px;
+	background-position: -238px -545px;
+}
+#china dt.anhui {
+	top: 299px;
+	left: 518px;
+	background-position: -381px -542px; height:150px;
+}
+#china dt.shandong {
+	top: 232px;
+	left: 509px;
+	background-position: -462px -534px;
+	width: 95px;
+}
+#china dt.jiangsu {
+	top: 285px;
+	left: 532px;
+	background-position: -580px -545px;
+	width:100px;
+}
+#china dt.hainan {
+	top: 508px;
+	left: 435px;
+	background-position: -680px -535px;
+}
+#china dt.taiwan {
+	top: 419px;
+	left: 591px;
+	width: 40px;
+	background-position: -795px -535px;
+}
+#china dt.beijing {
+	top: 156px;
+	left: 505px;
+	width: 50px;
+	background-position: -848px -504px;
+}
+#china dt.tianjin {
+	top: 199px;
+	left: 496px;
+	background-position: -880px -535px;
+}
+#china dt.shanghai {
+	top: 328px;
+	left: 581px;
+	width: 50px;
+	background-position: -848px -574px;
+}
+#china dd {
+	font-size: 14px;
+	position: absolute;
+	cursor: pointer;
+	color: #000;
+	width: 35px;
+	height: 20px;
+	display: block;
+	line-height: 20px;
+	text-align: center;
+	background: url(../../images/china/citynamebg.png) no-repeat -5px -20px;
+	z-index: 5;
+	display:none;
+}
+/* 直辖市 */
+
+#beijing {
+	left: 505px;
+	top: 198px;
+	
+}
+#shanghai {
+	left: 597px;
+	top: 329px;
+}
+#tianjin {
+	left: 530px;
+	top: 217px;
+}
+#chongqing {
+	left: 418px;
+	top: 364px;
+}
+/* 华北区 */
+
+#hebei {
+	left: 496px;
+	top: 239px;
+}
+#shanxi {
+	left: 456px;
+	top: 265px;
+}
+#henan {
+	left: 475px;
+	top: 305px;
+}
+/* 东北区 */
+
+#liaoning {
+	left: 584px;
+	top: 175px;
+}
+#jilin {
+	left: 618px;
+	top: 138px;
+}
+#china dd#heilongjiang {
+	top: 90px;
+	left: 620px;
+	width: 50px;
+}
+#china dd#neimenggu {
+	left: 419px;
+	top: 205px;
+	width: 50px;
+}
+#china dd#heilongjiang dt, #china dd#neimenggu dt {
+	width: 40px;
+	height: 20px;
+}
+#shandong {
+	left: 540px;
+	top: 260px;
+}
+/* 华东区  */
+
+#jiangsu {
+	left: 580px;
+	top: 306px;
+}
+#anhui {
+	left: 530px;
+	top: 334px;
+}
+#zhejiang {
+	left: 587px;
+	top: 367px;
+}
+#fujian {
+	left: 545px;
+	top: 426px;
+}
+/* 华中区 */
+
+#hubei {
+	left: 481px;
+	top: 348px;
+}
+#hunan {
+	left: 470px;
+	top: 400px;
+}
+#jiangxi {
+	left: 512px;
+	top: 400px;
+}
+/* 华南区 */
+
+#guangdong {
+	left: 508px;
+	top: 455px;
+}
+#guangdong dd {
+}
+#guangxi {
+	left: 435px;
+	top: 464px;
+}
+#hainan {
+	left: 440px;
+	top: 525px;
+}
+/* 西南区 */
+
+#sichuan {
+	left: 354px;
+	top: 360px;
+}
+#guizhou {
+	left: 409px;
+	top: 417px;
+}
+#yunnan {
+	left: 337px;
+	top: 451px;
+}
+#xizang {
+	left: 166px;
+	top: 338px;
+}
+#qinghai {
+	left: 265px;
+	top: 275px;
+}
+/* 西北区 */
+
+#shaanxi {
+	left: 420px;
+	top: 307px;
+}
+#gansu {
+	left: 280px;
+	top: 214px;
+}
+#ningxia {
+	left: 385px;
+	top: 258px;
+}
+#xinjiang {
+	left: 158px;
+	top: 198px;
+}
+/* 台湾区 */
+
+#taiwan {
+	left: 590px;
+	top: 450px;
+}
+/*  chinalist */
+
+#chinalist {
+	width: 294px;
+	height: 613px;
+	position: absolute;
+	top: 2px;
+	left: -258px;
+	z-index: 20;
+
+}
+#chinalist #allow {
+	width: 24px;
+	
+	height: 353px;
+	padding:0 10px;
+	padding-top:230px;
+	color: #FFF;
+	line-height: 20px;
+	font-size:16px;
+	cursor: pointer;
+	float: left;
+	text-align: center;
+}
+
+
+.allow1{background:url(../images/shousuo1.png) no-repeat center center;}
+.allow2{background:url(../images/zhankai1.png) no-repeat center center;}
+
+/*  chinaprovince  */
+
+#chinaprovince {
+	width: 231px;
+	height: 613px;
+	float: left;
+	background: #577894;
+	padding: 9px;  
+	color: #00;
+	background:url(../images/bejing1.png) no-repeat;
+}
+#chinaprovince dl {
+	width: 228px;
+	padding: 0;
+	height: auto;
+	clear: both;
+	right:8px;
+}
+#chinaprovince dt {
+	font-size: 14px;
+	text-align: left;
+	height: 25px;
+	line-height: 25px;
+	width: 218px;
+	padding: 5px 0;
+	margin: 0;
+	padding-left:10px;
+	margin-top:20px;
+	position: relative;
+	color:#464c00;
+}
+#chinaprovince dd {
+	height: 35px;
+	line-height: 35px;
+	padding-left:6px;
+	padding-right:7px;
+	width: 213px;
+	color: #5d5d5d;
+	display:block;
+	clear:both;
+	font-size: 13px;
+}
+#chinaprovince dd span {
+	color: #5d5d5d;
+	padding: 2px 2px;
+	cursor: pointer;
+	font-size: 13px;
+	
+}
+
+/*#chinaprovince dl.s {
+	background: #7FA5C5;
+}*/
+
+/*#chinaprovince dl.s dd span {
+	color: #FBF9FA;
+}*/
+#chinaprovince dl.s dd span.s {
+	background: #FFF;
+	color: #ff6c00;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	text-decoration:underline;
+}
+#chinaprovince dl.s #chinacitylist span {
+	color: #3d3d3d;
+	display:block;
+	float:left;
+	padding-right:10px;
+	
+	
+}
+#chinaprovince dl.s #chinacitylist {
+	display: block;
+	background: #f4f8c3;
+	padding-left:9px;
+	padding-right:6px;
+	clear:both;
+	float:left;
+}
+
+#chinaprovince #chinacitylist {
+	border-top: #FFF solid 1px;
+	border-bottom: #FFF solid 1px;
+	height: auto;
+	display: none;
+	margin-top: 5px;
+}
+#chinacenterlist {
+	width: 228px;
+	padding: 0;
+	
+	height: auto;
+}
+#chinacenterlist dd {
+	height: 30px;
+	line-height: 30px;
+	padding: 0;
+	width:218px;
+	padding:0 8px;
+	color: #5b5b5b;
+	cursor: pointer;
+}
+#chinacenterlist dd a {
+	color: #5b5b5b;
+}
+#chinacenterlist dd a:hover {
+	border-bottom: #FFF dotted 1px;
+}
+#chinacenterlist dd span {
+	background:url(../images/yuanqian1.png) no-repeat;
+	color: #fff;
+	margin-right: 5px;
+	padding:3px;
+	padding-top:2px;
+}
+
+#chinacenterlist dd span.t {
+	background:url(../images/yuanqiang.png) no-repeat;
+	color: #fff;
+	margin-right: 4px;
+}
+
+
+/* 地图 */
+
+#china .baiducenter{ width:450px; height:145px; margin:15px 0; }
+ 
+#china .baiducenter .img{ width:164px; height:145px; float:left; padding-top:4px;}
+
+#china .baiducenter .img img{ border:#eee solid 1px; padding:2px;}
+	 
+#china .baiducenter .title{ width:260px; height:100px; float:right; font-size:14px; line-height:24px; font-size:14px; padding-top:5px;}
+ #china .baiducenter p{font-size:14px; color:#747474; margin-top:5px;}
+#china .baiducenter p a{color:#000;text-decoration:underline; font-size:20px; color:#ff9600;}
+.baiducenter .title p.aiq_ahe{ height:70px; display:block;}
+/*地图-xd*/
+.da_right{width:714px; position:relative;}
+.da_richt_top{ position: relative; left:30px; top:50px; z-index:10; width:684px; height:30px;}
+.da_richt_top a{ width:60px; height:30px; display:block; font-size:16px; float:left; line-height:30px; text-align:center; background-color:#a5b300; color:#fff; margin-left:1px;}
+.da_richt_top a:hover{ background-color:#bdcb22;}
+.da_richt_top .a1{ background-color:#bdcb22;}
+
+
+/*  chinalist */
+
+#chinalist1 {
+	width: 294px;
+	height: 600px;
+	position: absolute;
+	top:0;
+	right: 0;
+	z-index: 20;
+	overflow:hidden;
+}
+#chinalist1 #allow2 {
+	width: 24px;
+	height: 340px;
+	padding:0 10px;
+	padding-top:230px;
+	color: #FFF;
+	line-height: 20px;
+	font-size:16px;
+	cursor: pointer;
+	float: left;
+	text-align: center;
+}
+
+
+.allow2{background:url(../images/shousuo.png) no-repeat center center;}
+.allow1{background:url(../images/zhankai.png) no-repeat center center;}
+
+/*  chinaprovince  */
+
+#chinaprovince1 {
+	width: 228px;
+	height: 600px;
+	float: left;
+	background: #577894;
+	padding: 11px;  
+	color: #00;
+	background:url(../images/bejing.png) no-repeat;
+}
+#chinaprovince1 dl {
+	width: 228px;
+	padding: 0;
+	height: auto;
+	clear: both;
+	right:8px;
+}
+#chinaprovince1 dt {
+	font-size: 14px;
+	text-align: left;
+	height: 25px;
+	line-height: 25px;
+	width: 218px;
+	padding: 5px 0;
+	margin: 0;
+	padding-left:10px;
+	margin-top:20px;
+	position: relative;
+	color:#464c00;
+}
+#chinaprovince1 dd {
+	height: 35px;
+	line-height: 35px;
+	padding-left:6px;
+	padding-right:7px;
+	width: 213px;
+	color: #5d5d5d;
+	display:block;
+	clear:both;
+	font-size: 13px;
+}
+#chinaprovince1 dd span {
+	color: #5d5d5d;
+	padding: 2px 2px;
+	cursor: pointer;
+	font-size: 13px;
+	
+}
+
+/*#chinaprovince dl.s {
+	background: #7FA5C5;
+}*/
+
+/*#chinaprovince dl.s dd span {
+	color: #FBF9FA;
+}*/
+#chinaprovince1 dl.s dd span.s {
+	background: #FFF;
+	color: #ff6c00;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	text-decoration:underline;
+}
+#chinaprovince1 dl.s #chinacitylist span {
+	color: #3d3d3d;
+	display:block;
+	float:left;
+	padding-right:10px;
+	
+	
+}
+#chinaprovince1 dl.s #chinacitylist {
+	display: block;
+	background: #f4f8c3;
+	padding-left:9px;
+	padding-right:6px;
+	clear:both;
+	float:left;
+}
+
+#chinaprovince1 #chinacitylist {
+	border-top: #FFF solid 1px;
+	border-bottom: #FFF solid 1px;
+	height: auto;
+	display: none;
+	margin-top: 5px;
+}
+#chinacenterlist1 {
+	width: 228px;
+	padding: 0;
+	
+	height: auto;
+}
+#chinacenterlist1 dd {
+	height: 30px;
+	line-height: 30px;
+	padding: 0;
+	width:218px;
+	padding:0 8px;
+	color: #5b5b5b;
+	cursor: pointer;
+}
+#chinacenterlist1 dd a {
+	color: #5b5b5b;
+}
+#chinacenterlist1 dd a:hover {
+	border-bottom: #FFF dotted 1px;
+}
+#chinacenterlist1 dd span {
+	background:url(../images/yuanqian1.png) no-repeat;
+	color: #fff;
+	margin-right: 5px;
+	padding:3px;
+	padding-top:2px;
+}
+
+#chinacenterlist1 dd span.t {
+	background:url(../images/yuanqiang.png) no-repeat;
+	color: #fff;
+	margin-right: 4px;
+}
