@@ -12,5 +12,24 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
 });
+
+Route::get('home',function ()
+	{
+		return view('home');
+	});
+
+
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+
+
+Route::get('main',function(){
+	return view('main');
+});
+
+
+
