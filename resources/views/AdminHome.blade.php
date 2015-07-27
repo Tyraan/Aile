@@ -29,7 +29,6 @@
               <button type="submit" class="btn btn-danger">删除</button>
             </form>
           @endforeach
-
         </div>
       </div>
     </div>
