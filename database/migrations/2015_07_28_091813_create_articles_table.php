@@ -20,10 +20,12 @@ class CreateArticlesTable extends Migration
             $table->string('image')->nullable();
             $table->integer('user_id');
             $table->integer('upvote')->nullable();
-
+            $table->integer('comments_id')->nullable();
+            
 
     });
 }
+
 
     /**
      * Reverse the migrations.

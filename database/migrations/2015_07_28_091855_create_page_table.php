@@ -20,7 +20,8 @@ class CreatePageTable extends Migration
             $table->text('body')->nullable();
             $table->integer('user_id');
             
-    }
+         });
+    } 
 
     /**
      * Reverse the migrations.

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateActiveCenterTable extends Migration
+class CreateActivityTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,15 +12,11 @@ class CreateActiveCenterTable extends Migration
      */
     public function up()
     {
-        Schema::create('activeCenter', function (Blueprint $table) {
+        Schema::create('activity', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('centername');
-            $table->integer('activity_id');
-            
-            
-
-                              
+            $table->text('discription');
+            $table->
         });
     }
 
@@ -31,6 +27,6 @@ class CreateActiveCenterTable extends Migration
      */
     public function down()
     {
-        Schema::drop('activeCenter');
+        Schema::drop('activity');
     }
 }
