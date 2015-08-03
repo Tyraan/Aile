@@ -28,6 +28,7 @@ Route::controllers([
     'password' => 'Auth\PasswordController',
 ]);
 
+Route::controllers('test',"tryController");
 
 
 
