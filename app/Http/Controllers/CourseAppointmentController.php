@@ -37,8 +37,22 @@ class CourseAppointmentController extends Controller
      * @return Response
      */
     public function store(Request $request)
-    {
-        //
+    {   
+        if(isset($request->mobile)){
+            
+        $appointment = new CourseAppointment;
+        $appointment->name = $request->name;
+        $appointment->mobile = $request->mobile;
+        $appointment->babyname = $request->babyname;
+        $appointment->babymonth= $request->babymonth;        
+        $appointment->city = $request->city;
+        $appointment->address = $request ->address;
+        $appointment->pubdate = $request ->pubdate;
+        $appointment->save();
+        }
+
+        return $this->index();
+
     }
 
     /**
