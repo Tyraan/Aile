@@ -24,7 +24,7 @@
 		<tr>
 			<td>预约时间</td><td><input type="datetime" name="pubtime" ></td>
 		</tr>
-		<tr><td>提交</td><td><input type="POST" ></td>
+		<tr><td>提交</td><td><input type="submit" ></td>
 		</tr>
 	</tbody>
 </table>	
