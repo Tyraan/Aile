@@ -9,7 +9,7 @@
 	@foreach($CourseAppointment as $course)
 	<tr>
 		<th>{{ $course->id }}</th><th>{{ $course->babyname }}</th><th>{{ $course->babysex }}</th>
-		<th>{{ $course->babymonth }}</th>
+		<th>{{ $course->rq }}</th>
 		<th>{{ $course->mobile }}</th><th>{{ $course->city }}</th><th>{{ $course->address }}</th>
 		<th>{{ date("Y-m-d H:i",$course->pubdate) }}</th>		
 	</tr>
