@@ -5,7 +5,6 @@
 	</tr>
 </thead>
 <tbody>
-
 	@foreach($CourseAppointment as $course)
 	<tr>
 		<th>{{ $course->id }}</th><th>{{ $course->babyname }}</th><th>{{ $course->babysex }}</th>
