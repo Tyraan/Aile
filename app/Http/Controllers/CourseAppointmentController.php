@@ -38,18 +38,20 @@ class CourseAppointmentController extends Controller
      */
     public function store(Request $request)
     {   
-        // if(isset($request->mobile)){            
-        // $appointment = new CourseAppointment;        
-        // $appointment->mobile = $request->mobile;
-        // $appointment->babyname = $request->babyname;
-        // $appointment->babymonth= $request->babymonth;        
-        // $appointment->city    = $request->city;
-        // $appointment->address = $request ->address;
-        // $appointment->pubdate = $request ->pubdate;
-        // $appointment->save();
-        //}        
-        
-        return view("test",['name'=>var_dump($request)]);
+        if(isset($request->mobile)){
+            
+        $appointment = new CourseAppointment;
+        $appointment->name = $request->name;
+        $appointment->mobile = $request->mobile;
+        $appointment->babyname = $request->babyname;
+        $appointment->babymonth= $request->babymonth;        
+        $appointment->city = $request->city;
+        $appointment->address = $request ->address;
+        $appointment->pubdate = $request ->pubdate;
+        $appointment->save();
+        }
+
+        return $this->index();
 
     }
 
@@ -97,6 +99,4 @@ class CourseAppointmentController extends Controller
     {
         //
     }
-
-
 }

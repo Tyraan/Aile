@@ -27,7 +27,6 @@ Route::controllers([
     'password' => 'Auth\PasswordController',
 ]);
 
-
 Route::controller("test","tryController");
 Route::resource('courseap','CourseAppointmentController');
 
