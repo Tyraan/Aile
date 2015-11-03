@@ -33,12 +33,16 @@ class AddNewsToCenterTable extends Migration
 
             });
         }
+        if (Schema::hasTable('center_news')){
+            Schema::drop('center_news');
+        }
+        Schema::create('center_news',function(Blueprint $table){
+             $table->integer('center_id')->unsigned()->index();            
+             $table->integer('news_id')->unsigned()->index();                          
+             $table->timestamps();   
 
-        Schema::table('center_news', function(Blueprint $table){
 
-            $table->foreign('center_id')->references('id')->on('news')->onDelete('cascade');
-            $table->foreign('news_id')->references('id')->on('center')->onDelete('cascade');
-        });
+        });         
     }
 
     /**

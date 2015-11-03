@@ -11,7 +11,7 @@ class Center extends Model
 	
 
 	public function news(){
-		return $this->hasMany('App\News');		
+		return $this->belongsToMany('App\News');		
 
 	}
 

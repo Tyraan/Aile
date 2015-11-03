@@ -28,7 +28,9 @@ Route::controllers([
 ]);
 
 
+
 Route::controller("test","tryController");
 Route::resource('courseap','CourseAppointmentController');
+Route::resource('center','centerController');
 
 
