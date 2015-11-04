@@ -19,11 +19,9 @@ class CreateTagsTable extends Migration
         if (Schema::hasTable('tags')){
             Schema::drop('tags');
         }
-
         if (Schema::hasTable('center_news')){
             Schema::drop('center_news');
-        }
-        
+        }        
                
         Schema::create('center', function(Blueprint $table)
         {
@@ -37,13 +35,8 @@ class CreateTagsTable extends Migration
              $table->integer('center_id')->unsigned()->index();            
              $table->integer('news_id')->unsigned()->index();                          
              $table->timestamps();   
-
-
         });       
     }
-
-
-
     /**
      * Reverse the migrations.
      *

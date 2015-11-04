@@ -1,7 +1,7 @@
 @include('_layouts.saparateParts.head')
 <body>
 
-<a href="{{ URL('center/create') }}" class="btn btn-lg btn-primary">新增</a>
+<a href="{{ URL('center/create') }}" >新增</a>
 
           @foreach ($centers as $center)
             <hr>
@@ -14,7 +14,7 @@
                 	@foreach ($center->news as $new)
                 	<h5>{{$new->caption}}</h5>
                 	<p>
-                		{{$new->content}}
+                		{$new->content}
                 	</p>
                 	@endforeach
                 </p>
@@ -27,7 +27,6 @@
               <button type="submit" class="btn btn-danger">删除</button>
             </form>
  		@endforeach
-
 
 </body>
 </html>

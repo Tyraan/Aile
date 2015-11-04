@@ -1,13 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Center;
-
-
+use App\News;
 class CenterController extends Controller
 {
     /**
@@ -20,6 +17,8 @@ class CenterController extends Controller
         return view('viewfile.center.centerAdmin')->with('centers',Center::all());
     }
 
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -27,7 +26,7 @@ class CenterController extends Controller
      */
     public function create()
     {
-        //
+        return view('viewfile.center.centerCreate')->with('news',News::all());
     }
 
     /**
@@ -38,7 +37,9 @@ class CenterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //储存新建的中心到数据库
+         $name = $request->input('name');
+
     }
 
     /**
@@ -76,8 +77,7 @@ class CenterController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
+     * Remove the specified resource from storage.     
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
