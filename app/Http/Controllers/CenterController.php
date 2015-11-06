@@ -5,6 +5,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Center;
 use App\News;
+
+use Redirect, Input, Auth;
 class CenterController extends Controller
 {
     /**
@@ -37,11 +39,41 @@ class CenterController extends Controller
      */
     public function store(Request $request)
     {
-        //储存新建的中心到数据库
-         $name = $request->input('name');
+        //储存  提交的新建的中心 到数据库
+         $this->validate($request, [
+            'name'   => 'required|unique:center|max:255',
+            'intro'  => 'required|max:511',
+            'supervisor' =>'required|max:255',            
+        ]);
 
-    }
 
+         //储存数据
+         $center = new Center;
+         $center->name = $request->input('name');;
+         $center->intro= $request->input('intro');
+         $center->supervisor = $request->input('supervisor');
+
+         $newsId= $request->input('news');
+         $center->save();
+
+         //储存关系表
+        $center->news()->attach($newsId);
+        return $this->index();
+        
+         
+
+
+         // if(!empty($news && is_array($news))){
+         //    foreach ( $news as $new ) {
+         //        $center->news()->attach($new); 
+         //    }            
+         // }
+
+        
+        
+        }
+        
+}
     /**
      * Display the specified resource.
      *
@@ -51,6 +83,7 @@ class CenterController extends Controller
     public function show($id)
     {
         //
+        return view('centerShow')->withCenter(Center::find($id));
     }
 
     /**
@@ -62,6 +95,7 @@ class CenterController extends Controller
     public function edit($id)
     {
         //
+        return view('centerEdit')->withCenter(Center::find($id));
     }
 
     /**
@@ -84,5 +118,8 @@ class CenterController extends Controller
     public function destroy($id)
     {
         //
+
+
+
     }
 }

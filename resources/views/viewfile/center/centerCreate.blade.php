@@ -11,7 +11,7 @@
 	<thead>
 		<tr>
 			<th><p>中心名称</p><input type = 'text' name="name" ></th>
-			 <input type="hidden" name="_token" value="{{ csrf_token() }}">
+			 
 		</tr>
 	</thead>
 	<tbody>
@@ -24,11 +24,14 @@
 		@foreach($news as $new)
 			<tr>
 				<td>
-					<label><input type="checkbox" name="news" value="{{ $new ->id }}"> {{ $new->caption }} </label>
+					<label><input type="checkbox" name="news[]" value="{{ $new ->id }}"> {{ $new->caption }} </label>
 				</td>
 			</tr>
 		@endforeach
+
 		<tr><td><button type="submit">建立新中心</button></td></tr>
+
+		<tr><input type="hidden" name="_token" value="{{ csrf_token() }}"></tr>
 	</tbody>
 </table>
 

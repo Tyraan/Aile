@@ -12,10 +12,7 @@
                 <p> {{$center->supervisor}} </p>
                 <p>
                 	@foreach ($center->news as $new)
-                	<h5>{{$new->caption}}</h5>
-                	<p>
-                		{$new->content}
-                	</p>
+                	<h5>{{$new->caption}}</h5>                
                 	@endforeach
                 </p>
               </div>
