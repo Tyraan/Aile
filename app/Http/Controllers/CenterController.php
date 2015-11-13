@@ -5,8 +5,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Center;
 use App\News;
-
 use Redirect, Input, Auth;
+
+
 class CenterController extends Controller
 {
     /**
@@ -14,10 +15,11 @@ class CenterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         return view('viewfile.center.centerAdmin')->with('centers',Center::all());
-    }
+    }   
 
 
 
@@ -26,6 +28,7 @@ class CenterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function create()
     {
         return view('viewfile.center.centerCreate')->with('news',News::all());
@@ -39,6 +42,7 @@ class CenterController extends Controller
      */
     public function store(Request $request)
     {
+
         //储存  提交的新建的中心 到数据库
          $this->validate($request, [
             'name'   => 'required|unique:center|max:255',
@@ -46,34 +50,27 @@ class CenterController extends Controller
             'supervisor' =>'required|max:255',            
         ]);
 
-
          //储存数据
          $center = new Center;
          $center->name = $request->input('name');;
-         $center->intro= $request->input('intro');
+         $center->intro = $request->input('intro');
          $center->supervisor = $request->input('supervisor');
-
-         $newsId= $request->input('news');
+         $newsId = $request->input('news');
          $center->save();
 
-         //储存关系表
-        $center->news()->attach($newsId);
-        return $this->index();
-        
-         
+        //储存关系表 
+          if(!empty($newsId && is_array($newsId))){
+             foreach ( $newsId as $news ) {
+              $center->news()->attach($news); 
+            }            
+          }
+          
+        return $this->index();    
+    
+    }
 
 
-         // if(!empty($news && is_array($news))){
-         //    foreach ( $news as $new ) {
-         //        $center->news()->attach($new); 
-         //    }            
-         // }
 
-        
-        
-        }
-        
-}
     /**
      * Display the specified resource.
      *
@@ -83,8 +80,12 @@ class CenterController extends Controller
     public function show($id)
     {
         //
-        return view('centerShow')->withCenter(Center::find($id));
+        return view('viewfile.center.centerShow')->withCenter(Center::find($id));
     }
+
+
+
+
 
     /**
      * Show the form for editing the specified resource.
@@ -94,8 +95,10 @@ class CenterController extends Controller
      */
     public function edit($id)
     {
-        //
-        return view('centerEdit')->withCenter(Center::find($id));
+        return view('viewfile.center.centerEdit',[
+            'news'=> News::all(),
+            "center" =>Center::all(),
+            ]);
     }
 
     /**
@@ -107,7 +110,18 @@ class CenterController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //更新由edit 视图传来的函数
+        $this->validate($request ,[
+            "name" =>"required",
+            "intro" =>"required",
+            "supervisor"=>"required"]);
+        if (Center::where('id', $id)->update(Input::except(['_method', '_token']))) {
+            return Redirect::to('center');
+            } else {
+            return Redirect::back()->withInput()->withErrors('更新失败！');
+        }
+
+
     }
 
     /**
@@ -117,7 +131,12 @@ class CenterController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //删除中心   
+
+        $comment = Comment::find($id);
+        $comment->delete();
+
+        return Redirect::to('center');
 
 
 
