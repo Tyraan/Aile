@@ -10,7 +10,7 @@ class News extends Model
 	protected $table ='news';
 
     public function center(){
-        return $this->belongsToMany('Center' ,'center_news','id','center_id');
+        return $this->belongsToMany('App\Center');
         
     }
 }
