@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Center extends Model
 {
     //table name
-	protected $table = 'center';	
-	
+	protected $table = 'center';
+	protected $fillable = ['name','intro','supervisor'];	
 
 	public function news(){
 		return $this->belongsToMany('App\News');		
