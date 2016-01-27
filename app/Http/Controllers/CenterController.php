@@ -145,13 +145,10 @@ class CenterController extends Controller
         /* 
         $center->news()->sync($request->news);         
         $input = Input::except(['_method', '_token','banner','news']);
-        $input['banner'] = $picture;
+        $input['banner'] = $picture;        
         */ 
-
         $input = Input::except(['_method', '_token','banner']);
         $input['banner']= $destinationPath.$picture;
-       
-
         if ($center->update($input))           
         {     
             return Redirect::to('center');
