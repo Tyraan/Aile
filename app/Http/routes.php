@@ -11,33 +11,26 @@
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-});
-
-
-
-
-
-Route::get('home',function (){
- 	  return view('home');
- 	  
-	});
-
-
-
+Route::get('/',   'HomeController@index');
+Route::get('home','HomeController@index');
 
 
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
+
 Route::controllers([  
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',
 ]);
 
-
+/*Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function()
+{
+  Route::get('/', 'AdminHomeController@index');  
+  Route::resource('center','centerController');
+});
+*/
 
 Route::controller("test","tryController");
 Route::resource('courseap','CourseAppointmentController');
