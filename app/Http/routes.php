@@ -12,7 +12,13 @@
 */
 
 Route::get('/',   'HomeController@index');
-Route::get('home','HomeController@index');
+Route::group(['prefix'=>'home',],function(){
+	Route::controller('/','HomeController'); 
+	//Route::get('story','HomeController@story');
+
+    }
+	);
+
 
 
 Route::get('auth/login', 'Auth\AuthController@getLogin');

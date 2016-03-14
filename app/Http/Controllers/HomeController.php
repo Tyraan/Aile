@@ -35,6 +35,11 @@ class HomeController extends Controller {
 		return view('main')->with('session',session());
 	}
 
+	public function getStory()
+	{
+		return view('viewfile/home/story')->with('session',session());
+	}
+
 }
 
 
