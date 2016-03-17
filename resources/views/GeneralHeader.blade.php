@@ -1,4 +1,9 @@
-
+<script type="text/javascript" src="{{ URL::asset('/js/jquery-1.7.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('/js/jquery.event.drag-1.5.min.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('/js/jquery.touchSlider.js') }}"></script>
+<link type="text/css" href="{{ URL::asset('/css/style_index.css') }}" rel="stylesheet">
+<link type="text/css" href="{{ URL::asset('/css/style_boox1.css') }}" rel="stylesheet">
+<link type="text/css" href="/css/style10_15.css" rel="stylesheet">
 <div class="sy_top">
    <div class="sy_top1">
     <div class="hd-main clearfix" id="header">

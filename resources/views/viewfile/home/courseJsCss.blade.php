@@ -1,13 +1,9 @@
 
-<link rel="shortcut icon" type="image/x-icon" href="/templates/default/images/aileguoji.ico" media="screen" />
-<link rel="stylesheet" type="text/css" href="/templates/default/css/my.css">
-<script type="text/javascript" src="/templates/default/js/zaojiao.js"></script>
-<link type="text/css" href="/templates/default/css/style_boox1.css" rel="stylesheet">
-<link type="text/css" href="/templates/default/css/style_index.css" rel="stylesheet">
-<script src="/templates/default/js/jquery-1.4.2.min.js" type="text/javascript"></script>
-<script src="/templates/default/js/tongyign.js"type="text/javascript"></script>
-
-<script type="text/javascript" src="/templates/default/js/my.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="/img/aileguoji.ico" media="screen" />
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<script src="/js/tongyign.js"type="text/javascript"></script>
+<script type="text/javascript" src="/js/my.js"></script>
+<script class="resources library" src="/js/area.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 	
@@ -20,6 +16,7 @@ $(document).ready(function(){
 	});
 	
 });
+
 
 //二维码弹出
 function tcc_show()
@@ -48,10 +45,10 @@ function tcc_show_sp()
                yincang.style.display='block';//none表示隐藏
 }
 </script>
-<link type="text/css" href="/templates/default/css/style10_15.css" rel="stylesheet">
-<script type="text/javascript" src="/templates/default/js/jquery-1.9.1.js" ></script>
-<script type="text/javascript" src="/templates/default/js/date1.js" ></script>
-<script type="text/javascript" src="/templates/default/js/iscroll.js" ></script>
+<link type="text/css" href="/css/style10_15.css" rel="stylesheet">
+<script type="text/javascript" src="/js/jquery-1.9.1.js" ></script>
+<script type="text/javascript" src="/js/date1.js" ></script>
+<script type="text/javascript" src="/js/iscroll.js" ></script>
 <script type="text/javascript">
 /*$(function(){
 	$('#beginTime').date();

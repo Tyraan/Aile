@@ -40,6 +40,19 @@ class HomeController extends Controller {
 		return view('viewfile/home/story')->with('session',session());
 	}
 
+	public function getCourse()
+	{
+		return view('viewfile/home/course');
+	}
+
+	public function postCourse(Request $request)
+	{
+		return view('viewfile/home/course');
+	}
+
+	
+
+
 }
 
 

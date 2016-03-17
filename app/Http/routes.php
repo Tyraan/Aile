@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/',   'HomeController@index');
+Route::get('/','HomeController@index');
 Route::group(['prefix'=>'home',],function(){
+
 	Route::controller('/','HomeController'); 
-	//Route::get('story','HomeController@story');
+	Route::get('/','HomeController@index');
+	
 
     }
 	);

@@ -1,12 +1,5 @@
-<link rel="shortcut icon" type="image/x-icon" href="{{  URL::asset('/images/aileguoji.ico') }}" media="screen" />
+<link rel="shortcut icon" type="image/x-icon" href="{{  URL::asset('/img/aileguoji.ico') }}" media="screen" />
 
-<script type="text/javascript" src="{{ URL::asset('/js/jquery-1.7.1.min.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('/js/jquery.event.drag-1.5.min.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('/js/jquery.touchSlider.js') }}"></script>
-
-<link type="text/css" href="/css/style10_15.css" rel="stylesheet">
-<link type="text/css" href="{{ URL::asset('/css/style_index.css') }}" rel="stylesheet">
-<link type="text/css" href="{{ URL::asset('/css/style_boox1.css') }}" rel="stylesheet">
 <script type="text/javascript" charset="utf-8" src="http://lead.soperson.com/20000301/10045318.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
