@@ -1,7 +1,7 @@
 <div class="boss">
   <!--通用标题-->
   <div class="tyongtop">
-    <div class="tybiaoti"><img src="/templates/default/images/s_ailikecheng.png"></div>
+    <div class="tybiaoti"><img src="/img/s_ailikecheng.png"></div>
   </div>
   
   <div class="bs_baisbj">
@@ -9,7 +9,7 @@
       <!--位置-->
       <div class="ai_weizhi">
         <ul>
-          <li><img src="/templates/default/images/hoom.png"></li>
+          <li><img src="/img/hoom.png"></li>
           <li><a href="/index.html">首页</a></li>
           <li>></li>
           
@@ -23,9 +23,9 @@
           <div class="kechengxuanze">
             <div class="kechengxuanze_t">
 
-            @if ($child_month_age <1)
+            @if ($child_month_age<1)
             您的孩子是{{$birthday}}出生，尚未满一个月，还没有适合的课程
-            @elif ($child_age<6)
+            @elseif ($child_age<6)
             "您的孩子是{{ $birthday }}出生，现在 {{$child_age}} 岁 {{$child_month}}个月，可以选择如下课程"
             @else 
             "您的孩子是{{ $birthday }}出生,现在满  {{ $child_age }}岁，已经可以从早教中心毕业啦，期待您的下一个小宝宝。
@@ -41,7 +41,7 @@
             <div class="kechengxuanze_m">
               <div class="kechengxuanze_m_t">
                 <a href="#" target="_blank">
-                <img src="/templates/default/images/ke_03.jpg" width="308" height="69" alt=""></a>
+                <img src="/img/ke_03.jpg" width="308" height="69" alt=""></a>
  </div>
 <ul>
   <!--music course-->
@@ -51,50 +51,50 @@
       <a href="/music/index.html"  target="_blank"><img src="/img/kechengxuanze/Kindermusik.jpg" width="277" height="252" alt=""></a></span>
       <span class="kmm1_m">
         <p class="kmm1_m_t">
-          适合年龄：<a href="/music/index.html" target="_blank">{{$music_course_discription }}</a>
+          适合年龄：<a href="/music/index.html" target="_blank">{{$music['discription'] }}</a>
           <br/>
-          课程名称：<a href="" target="_blank">{{$music_course_name }}</a>  </p>
-          <p class="kmm1_b">  <a href="/music/index.html"  target="_blank"><img src="/templates/default/images/ke_150.png" width="124" height="34" alt=""></a> </p></span>
+          课程名称：<a href="" target="_blank">{{$music['name'] }}</a>  </p>
+          <p class="kmm1_b">  <a href="/music/index.html"  target="_blank"><img src="/img/ke_150.png" width="124" height="34" alt=""></a> </p></span>
         </li>
   @endif
 
 
 
-      <!--fitBaby course-->
+ <!--fitBaby course-->
   @if($fitbaby)
 <li class="kechengxuanze_m_m_1">    
 <span class="kmm1_t">
 <a href="/fitbaby/index.html"  target="_blank">
-<img src="/templates/default/images/kechengxuanze/Fitbaby.jpg" width="277" height="252" alt="">
+<img src="/img/kechengxuanze/Fitbaby.jpg" width="277" height="252" alt="">
 </a>
 </span>     
-<span class="kmm1_m">  <p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{$fitbaby_course_name}}</a><br/>
+<span class="kmm1_m">  <p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{$fitbaby['name']}}</a><br/>
           适合年龄：
-<a href="/fitbaby/index.html" target="_blank">{{ $ifitbaby_course_discription }}</a></p>
-<p class="kmm1_b"><a href="/fitbaby/index.html"  target="_blank"><img src="/templates/default/images/ke_150.png" width="124" height="34" alt=""></a> </p></span>
+<a href="/fitbaby/index.html" target="_blank">{{ $fitbaby['discription'] }}</a></p>
+<p class="kmm1_b"><a href="/fitbaby/index.html"  target="_blank"><img src="/img/ke_150.png" width="124" height="34" alt=""></a> </p></span>
 </li>  
 @endif
 <!--fitKid course-->
 @if ( $fitkid)
 
   <li class="kechengxuanze_m_m_1">    
-<span class="kmm1_t"> <a href="/fitkid/index.html"  target="_blank"><img src="/templates/default/images/kechengxuanze/Fitkid.jpg" width="277" height="252" alt=""></a></span>
+<span class="kmm1_t"> <a href="/fitkid/index.html"  target="_blank"><img src="/img/kechengxuanze/Fitkid.jpg" width="277" height="252" alt=""></a></span>
      
-<span class="kmm1_m">              <p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{ $fitkid_course_name}}</a><br/>
-          适合年龄：<a href="/fitkid/index.html" target="_blank">{{$fitkid_course_discription}}</a></p>
-                       <p class="kmm1_b">  <a href="/fitkid/index.html"  target="_blank"><img src="/templates/default/images/ke_150.png" width="124" height="34" alt=""></a> </p></span>
+<span class="kmm1_m">              <p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{ $fitkid['name']}}</a><br/>
+          适合年龄：<a href="/fitkid/index.html" target="_blank">{{$fitkid['discription']}}</a></p>
+                       <p class="kmm1_b">  <a href="/fitkid/index.html"  target="_blank"><img src="/img/ke_150.png" width="124" height="34" alt=""></a> </p></span>
 </li> 
 @endif       
 
 <!--art course-->
-@if ($artcourse)
+@if ($art)
 
 <li class="kechengxuanze_m_m_1">    
-<span class="kmm1_t"> <a href="/art/index.html"  target="_blank"><img src="/templates/default/images/kechengxuanze/Art.jpg" width="277" height="252" alt=""></a></span>
+<span class="kmm1_t"> <a href="/art/index.html"  target="_blank"><img src="/img/kechengxuanze/Art.jpg" width="277" height="252" alt=""></a></span>
 <span class="kmm1_m"> 
-<p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{$art_course_name}}</a><br/>
-          适合年龄：<a href="/art/index.html" target="_blank">{{ $art_course_discription }}</a></p>
- <p class="kmm1_b">  <a href="/art/index.html"  target="_blank"><img src="/templates/default/images/ke_150.png" width="124" height="34" alt=""></a> </p></span>     
+<p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{$art['name']}}</a><br/>
+          适合年龄：<a href="/art/index.html" target="_blank">{{ $art['discription'] }}</a></p>
+ <p class="kmm1_b">  <a href="/art/index.html"  target="_blank"><img src="/img/ke_150.png" width="124" height="34" alt=""></a> </p></span>     
 </li>
 @endif
 
@@ -102,33 +102,33 @@
 <!--CookingFun_course-->
 @if ($cookingfun )
 <li class="kechengxuanze_m_m_1">    
-        <span class="kmm1_t"> <a href="/cookingfun/index.html"  target="_blank"><img src="/templates/default/images/kechengxuanze/CookingFun.jpg" width="277" height="252" alt=""></a></span>
+        <span class="kmm1_t"> <a href="/cookingfun/index.html"  target="_blank"><img src="/img/kechengxuanze/CookingFun.jpg" width="277" height="252" alt=""></a></span>
      
         <span class="kmm1_m">
-    <p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{$cookingfun_course_name}}</a><br/>
-          适合年龄：<a href="/cookingfun/index.html" target="_blank">{{ $cookingfun_course_discription }}</a></p>
-          <p class="kmm1_b">  <a href="/cookingfun/index.html"  target="_blank"><img src="/templates/default/images/ke_150.png" width="124" height="34" alt=""> </a> </p></span>
+    <p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{$cookingfun['name']}}</a><br/>
+          适合年龄：<a href="/cookingfun/index.html" target="_blank">{{ $cookingfun['discription'] }}</a></p>
+          <p class="kmm1_b">  <a href="/cookingfun/index.html"  target="_blank"><img src="/img/ke_150.png" width="124" height="34" alt=""> </a> </p></span>
 </li>   
 @endif  
 
 <!--letterhand course-->
 @if ($letterhand)
   <li class="kechengxuanze_m_m_1">    
-   <span class="kmm1_t"> <a href="/letterland/index.html"  target="_blank"><img src="/templates/default/images/kechengxuanze/LetterLand.jpg" width="277" height="252" alt=""></a></span>
+   <span class="kmm1_t"> <a href="/letterland/index.html"  target="_blank"><img src="/img/kechengxuanze/LetterLand.jpg" width="277" height="252" alt=""></a></span>
      
-          <span class="kmm1_m">              <p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{ $letterhand_course_name }}</a><br/>
-          适合年龄：<a href="/letterland/index.html" target="_blank">{{ $letterhand_course_discription }}</a></p>
-                       <p class="kmm1_b">  <a href="/letterland/index.html"  target="_blank"><img src="/templates/default/images/ke_150.png" width="124" height="34" alt=""></a> </p></span>
+          <span class="kmm1_m">              <p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{ $letterhand['name ']}}</a><br/>
+          适合年龄：<a href="/letterland/index.html" target="_blank">{{ $letterhand['discription'] }}</a></p>
+                       <p class="kmm1_b">  <a href="/letterland/index.html"  target="_blank"><img src="/img/ke_150.png" width="124" height="34" alt=""></a> </p></span>
 </li>
    @endif   
 
    <!--waterGym course-->
    @@if ($watergym)
    <li class="kechengxuanze_m_m_1">    
-        <span class="kmm1_t"> <a href="/WaterGym/index.html"  target="_blank"><img src="/templates/default/images/kechengxuanze/shuiyu.jpg" width="277" height="252" alt=""></a></span>     
-          <span class="kmm1_m">              <p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{$watergym_course_name}}</a><br/>
-          适合年龄：<a href="/WaterGym/index.html" target="_blank">{{$watergym_course_discription }}</a></p>
-<p class="kmm1_b">  <a href="/WaterGym/index.html"  target="_blank"><img src="/templates/default/images/ke_150.png" width="124" height="34" alt=""></a> </p></span>
+        <span class="kmm1_t"> <a href="/WaterGym/index.html"  target="_blank"><img src="/img/kechengxuanze/shuiyu.jpg" width="277" height="252" alt=""></a></span>     
+          <span class="kmm1_m">              <p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{$watergym['name']}}</a><br/>
+          适合年龄：<a href="/WaterGym/index.html" target="_blank">{{$watergym['discription'] }}</a></p>
+<p class="kmm1_b">  <a href="/WaterGym/index.html"  target="_blank"><img src="/img/ke_150.png" width="124" height="34" alt=""></a> </p></span>
 </li>
      
    @endif
@@ -138,7 +138,7 @@
 </ul>
             </div>
             <div class="kechengxuanze_m_b">
-              <a href="#" target="_blank"><img src="/templates/default/images/ke_03.jpg" width="308" height="69" alt=""></a>
+              <a href="#" target="_blank"><img src="/img/ke_03.jpg" width="308" height="69" alt=""></a>
             </div>
           </div>
           
@@ -149,16 +149,16 @@
       <div class="ke_left">
         <div class="hkc_lewt"></div>
         <div class="kc_tshipin">
-          <div class="kc_shipin"><a href="#" onClick="tcc_show_sp()"><img src="/templates/default/images/s_shibo.png" width="274" height="158"></a></div>
+          <div class="kc_shipin"><a href="#" onClick="tcc_show_sp()"><img src="/img/s_shibo.png" width="274" height="158"></a></div>
           <div class="kc_fenxian">
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
               <tr>
                 <td width="11%">&nbsp;</td>
                 <td width="21%">分享到：</td>
-                <td width="14%"><a href="#"><img src="/templates/default/images/s_weibo.png" width="29" height="24"></a></td>
-                <td width="17%"><a href="#"><img src="/templates/default/images/a_weixin.png" width="26" height="22"></a></td>
-                <td width="12%"><a href="#"><img src="/templates/default/images/s_guge.png" width="22" height="20"></a></td>
-                <td width="25%"><a href="#"><img src="/templates/default/images/s_f.png" width="21" height="21"></a></td>
+                <td width="14%"><a href="#"><img src="/img/s_weibo.png" width="29" height="24"></a></td>
+                <td width="17%"><a href="#"><img src="/img/a_weixin.png" width="26" height="22"></a></td>
+                <td width="12%"><a href="#"><img src="/img/s_guge.png" width="22" height="20"></a></td>
+                <td width="25%"><a href="#"><img src="/img/s_f.png" width="21" height="21"></a></td>
               </tr>
             </table>
           </div>
@@ -217,14 +217,14 @@
         </td>
       </tr>
       <tr>
-        <td height="38" class="na_mfqia" colspan="4" align="center" ><input name="subsave"  type="image" onClick="return tj()" src="/templates/default/images/ai_shea.png" /></td>
+        <td height="38" class="na_mfqia" colspan="4" align="center" ><input name="subsave"  type="image" onClick="return tj()" src="/img/ai_shea.png" /></td>
       </tr>
     </form>
   </table>
   
 </div>
 
-<script class="resources library" src="/templates/default/js/area.js" type="text/javascript"></script>
+<script class="resources library" src="/js/area.js" type="text/javascript"></script>
 
 <script type="text/javascript">_init_area();</script>
 </div>
@@ -238,6 +238,6 @@
 <!--版权 版块-->
 <div class="ai_banquan">
 <div class="banqi_sj">
-<div class="ke_fhtop"><a href="#"><img src="/templates/default/images/s_fhtop.png"></a></div>
+<div class="ke_fhtop"><a href="#"><img src="/img/s_fhtop.png"></a></div>
 </div>
 </div>
