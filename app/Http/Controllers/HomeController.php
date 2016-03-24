@@ -2,6 +2,10 @@
 	  use Illuminate\Http\Request;
 	        
 
+
+
+
+
 class HomeController extends Controller {
 
 	/*
@@ -54,6 +58,7 @@ class HomeController extends Controller {
 		$birthday = $request->input('birthday','2016-3-17');
 		$child_age = floor((time()-strtotime($request->input('birthday','2016-3-17')))/31104000);
 		$child_month_age = floor((time()-strtotime($request->input('birthday','2016-3-17')))/2592000);
+
 		$child_month = $child_month_age %12 ;
 
 
@@ -79,6 +84,7 @@ class HomeController extends Controller {
 				'watergym'	=> $watergym
 		];
 		return view('viewfile/home/courseList',$arr);
+
 	}
 	
 

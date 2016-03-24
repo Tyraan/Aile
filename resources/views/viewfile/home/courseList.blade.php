@@ -22,11 +22,11 @@
         <div class="ke_right">
           <div class="kechengxuanze">
             <div class="kechengxuanze_t">
-
             @if ($child_month_age<1)
             您的孩子是{{$birthday}}出生，尚未满一个月，还没有适合的课程
             @elseif ($child_age<6)
             "您的孩子是{{ $birthday }}出生，现在 {{$child_age}} 岁 {{$child_month}}个月，可以选择如下课程"
+
             @else 
             "您的孩子是{{ $birthday }}出生,现在满  {{ $child_age }}岁，已经可以从早教中心毕业啦，期待您的下一个小宝宝。
             @endif
@@ -68,7 +68,11 @@
 <img src="/img/kechengxuanze/Fitbaby.jpg" width="277" height="252" alt="">
 </a>
 </span>     
+<<<<<<< HEAD
 <span class="kmm1_m">  <p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{$fitbaby['name']}}</a><br/>
+=======
+<span class="kmm1_m">  <p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{ $fitbaby_course_name }}</a><br/>
+>>>>>>> dfd4cf977b12649e702644951057967ca3cb3a4a
           适合年龄：
 <a href="/fitbaby/index.html" target="_blank">{{ $fitbaby['discription'] }}</a></p>
 <p class="kmm1_b"><a href="/fitbaby/index.html"  target="_blank"><img src="/img/ke_150.png" width="124" height="34" alt=""></a> </p></span>
