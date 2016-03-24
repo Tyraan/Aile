@@ -49,7 +49,7 @@ class HomeController extends Controller {
 		return view('viewfile/home/course');
 	}
 
-	public function postCourse(Request $request)
+	public function getCourselist(Request $request)
 	{   
 
 		include(app_path() . '\Function\courseFunction.php');
@@ -70,7 +70,9 @@ class HomeController extends Controller {
 		$watergym  = WaterGymCourse($child_month_age);
 
 
-		$arr = ['birthday'=>$birthday,
+		$arr = [
+				'courseList'=> True,
+				'birthday'=>$birthday,
 				'child_age'=> $child_age,
 				'child_month_age' =>$child_month_age,
 				'child_month' => $child_month,
@@ -82,7 +84,7 @@ class HomeController extends Controller {
 				'letterhand' => $letterhand,
 				'watergym'	=> $watergym
 		];
-		return view('viewfile/home/courseList',$arr);
+		return view('viewfile/home/course',$arr);
 
 
 	}

@@ -48,7 +48,7 @@
   @if ($music)    
   <li class="kechengxuanze_m_m_1">
     <span class="kmm1_t">
-      <a href="/music/index.html"  target="_blank"><img src="/img/kechengxuanze/Kindermusik.jpg" width="277" height="252" alt=""></a></span>
+      <a href="/music/index.html"  target="_blank"><img src="/img/Kindermusik.jpg" width="277" height="252" alt=""></a></span>
       <span class="kmm1_m">
         <p class="kmm1_m_t">
           适合年龄：<a href="/music/index.html" target="_blank">{{$music['discription'] }}</a>
@@ -65,7 +65,7 @@
 <li class="kechengxuanze_m_m_1">    
 <span class="kmm1_t">
 <a href="/fitbaby/index.html"  target="_blank">
-<img src="/img/kechengxuanze/Fitbaby.jpg" width="277" height="252" alt="">
+<img src="/img/Fitbaby.jpg" width="277" height="252" alt="">
 </a>
 </span>     
 
@@ -79,7 +79,7 @@
 @if ( $fitkid)
 
   <li class="kechengxuanze_m_m_1">    
-<span class="kmm1_t"> <a href="/fitkid/index.html"  target="_blank"><img src="/img/kechengxuanze/Fitkid.jpg" width="277" height="252" alt=""></a></span>
+<span class="kmm1_t"> <a href="/fitkid/index.html"  target="_blank"><img src="/img/Fitkid.jpg" width="277" height="252" alt=""></a></span>
      
 <span class="kmm1_m">              <p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{ $fitkid['name']}}</a><br/>
           适合年龄：<a href="/fitkid/index.html" target="_blank">{{$fitkid['discription']}}</a></p>
@@ -91,7 +91,7 @@
 @if ($art)
 
 <li class="kechengxuanze_m_m_1">    
-<span class="kmm1_t"> <a href="/art/index.html"  target="_blank"><img src="/img/kechengxuanze/Art.jpg" width="277" height="252" alt=""></a></span>
+<span class="kmm1_t"> <a href="/art/index.html"  target="_blank"><img src="/img/Art.jpg" width="277" height="252" alt=""></a></span>
 <span class="kmm1_m"> 
 <p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{$art['name']}}</a><br/>
           适合年龄：<a href="/art/index.html" target="_blank">{{ $art['discription'] }}</a></p>
@@ -103,7 +103,7 @@
 <!--CookingFun_course-->
 @if ($cookingfun )
 <li class="kechengxuanze_m_m_1">    
-        <span class="kmm1_t"> <a href="/cookingfun/index.html"  target="_blank"><img src="/img/kechengxuanze/CookingFun.jpg" width="277" height="252" alt=""></a></span>
+        <span class="kmm1_t"> <a href="/cookingfun/index.html"  target="_blank"><img src="/img/CookingFun.jpg" width="277" height="252" alt=""></a></span>
      
         <span class="kmm1_m">
     <p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{$cookingfun['name']}}</a><br/>
@@ -115,7 +115,7 @@
 <!--letterhand course-->
 @if ($letterhand)
   <li class="kechengxuanze_m_m_1">    
-   <span class="kmm1_t"> <a href="/letterland/index.html"  target="_blank"><img src="/img/kechengxuanze/LetterLand.jpg" width="277" height="252" alt=""></a></span>
+   <span class="kmm1_t"> <a href="/letterland/index.html"  target="_blank"><img src="/img/LetterLand.jpg" width="277" height="252" alt=""></a></span>
      
           <span class="kmm1_m">              <p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{ $letterhand['name ']}}</a><br/>
           适合年龄：<a href="/letterland/index.html" target="_blank">{{ $letterhand['discription'] }}</a></p>
@@ -126,7 +126,7 @@
    <!--waterGym course-->
    @@if ($watergym)
    <li class="kechengxuanze_m_m_1">    
-        <span class="kmm1_t"> <a href="/WaterGym/index.html"  target="_blank"><img src="/img/kechengxuanze/shuiyu.jpg" width="277" height="252" alt=""></a></span>     
+        <span class="kmm1_t"> <a href="/WaterGym/index.html"  target="_blank"><img src="/img/shuiyu.jpg" width="277" height="252" alt=""></a></span>     
           <span class="kmm1_m">              <p class="kmm1_m_t">课程名称：<a href="" target="_blank">{{$watergym['name']}}</a><br/>
           适合年龄：<a href="/WaterGym/index.html" target="_blank">{{$watergym['discription'] }}</a></p>
 <p class="kmm1_b">  <a href="/WaterGym/index.html"  target="_blank"><img src="/img/ke_150.png" width="124" height="34" alt=""></a> </p></span>

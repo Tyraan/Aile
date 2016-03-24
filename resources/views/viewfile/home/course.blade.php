@@ -9,8 +9,13 @@
 	</head>
 	<body  onload="setup()">
 	   <div class="kc_beija">
-		@include("GeneralHeader")		
-		@include("viewfile/home/courseBody")
+		@include("GeneralHeader")	
+
+		@if (isset($courseList))				
+			@include('viewfile/home/courseList')
+		@else
+			@include("viewfile/home/courseBody")
+		@endif
 		
 @include("foot")
 <!--点击弹出视频-->
