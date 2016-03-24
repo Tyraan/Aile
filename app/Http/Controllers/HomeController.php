@@ -2,8 +2,6 @@
 
 
 
-
-
 class HomeController extends Controller {
 
 	/*
@@ -58,8 +56,6 @@ class HomeController extends Controller {
 	    $child_month = $child_month_age - $child_age*12;
 	    $music = true;
 
-
-
 	    if($child_month_age>0 && $child_month_age<=12){   	
         $music_course_discription = '零至一周岁';
         $music_course_name = 'Level 1 Music Cradle';
@@ -87,34 +83,8 @@ class HomeController extends Controller {
     	$music = false;    
     }-
 
-	    
 
-        $fitbaby
-	    $fitbaby_course_name
-	    $fitbaby_course_discription
-
-	    $fitkid
-	    $fitkid_course_name
-	    $fitkid_course_discription
-
-	    $art
-	    $art_course_name
-	    $art_course_discription
-
-	    $cookingfun
-	    $cookingfun_course_name
-	    $cookingfun_course_discription
-
-	    $letterland
-	    $letterland_course_name
-	    $letterland_course_discription
-
-	    $watergym
-	    $watergym_course_name
-	    $watergym_course_discription
-
-
-		return view('viewfile/home/courseList')->with('')
+		return view('viewfile/home/courseList')；
 	}
 	
 
