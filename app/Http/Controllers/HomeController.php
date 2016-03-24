@@ -1,4 +1,6 @@
 <?php namespace App\Http\Controllers;
+	  use Illuminate\Http\Request;
+	        
 
 
 
@@ -48,43 +50,41 @@ class HomeController extends Controller {
 	}
 
 	public function postCourse(Request $request)
-	{
+	{   
+
+		include(app_path() . '\Function\courseFunction.php');
 		$birthday = $request->input('birthday','2016-3-17');
 		$child_age = floor((time()-strtotime($request->input('birthday','2016-3-17')))/31104000);
 		$child_month_age = floor((time()-strtotime($request->input('birthday','2016-3-17')))/2592000);
 
-	    $child_month = $child_month_age - $child_age*12;
-	    $music = true;
 
-	    if($child_month_age>0 && $child_month_age<=12){   	
-        $music_course_discription = '零至一周岁';
-        $music_course_name = 'Level 1 Music Cradle';
-        }
-    	elseif($child_month_age>13 && $child_month_age<=18){
-            $music_course_discription = "一岁至一岁半";
-            $music_course_name = "Level 2 Rock with Music";          	
-
-   		}
-    
-   		elseif($child_month_age>19 && $child_month_age<=26){
-       		 $music_course_discription = "一岁半至两岁零二个月";
-       		 $music_course_name = 'Level 3 Music Path';
-    	}
-  		elseif($child_month_age>27 && $child_month_age<=36){
-    	    $music_course_discription = '两岁二个月至三岁';
-    	    $music_course_name = "Level 4 Music Parade";
-        }
-        elseif($child_month_age>37 && $child_month_age<=60){
-        
-            $music_course_discription = "三岁至五岁";
-            $music_course_name = "Level 5 Music All Around";
-        }
-        else{    
-    	$music = false;    
-    }-
+		$child_month = $child_month_age %12 ;
 
 
-		return view('viewfile/home/courseList')；
+		$art = ArtCourse($child_month_age);
+		$music = MusicCradleCourse($child_month_age);
+		$fitbaby = FitBabyCourse($child_month_age);
+		$fitkid = FitKidCourse($child_month_age);
+		$cookingfun = CookingFunCourse($child_month_age);
+		$letterhand = LetterLandCourse($child_month_age);
+		$watergym  = WaterGymCourse($child_month_age);
+
+
+		$arr = ['birthday'=>$birthday,
+				'child_age'=> $child_age,
+				'child_month_age' =>$child_month_age,
+				'child_month' => $child_month,
+				'art'            => $art,
+				'music' => $music ,
+				'fitbaby' => $fitbaby,
+				'fitkid'  => $fitkid,
+				'cookingfun' => $cookingfun,
+				'letterhand' => $letterhand,
+				'watergym'	=> $watergym
+		];
+		return view('viewfile/home/courseList',$arr);
+
+
 	}
 	
 

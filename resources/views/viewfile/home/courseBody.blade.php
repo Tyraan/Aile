@@ -20,7 +20,8 @@
     <div class="kc_xuanze">
             <p><img src="/img/s_xzkc.png"></p>
             
-            <form method = "GET" action = "/handcourse.php">
+            <form method = "POST" action = "{{ URL('home/course')}}">
+            {!! csrf_field() !!}
               <p class="ck_goyix">
                 <input  id="subform" onClick = "return yz();" type = "submit" style="background:none; cursor:pointer; width:65px;height:40px;border:0px;" value=""/></p>
                 
