@@ -5,100 +5,14 @@
 <title>最新动态-爱乐国际早教中心--亲子早教|儿童早教|ilovegym|全球最具专业的早教课程体系</title>
 <meta name="keywords" content="国际早教|北京早教|早教中心|早教机构|早教加盟亲子早教|爱乐|爱乐国际早教中心|爱乐早教|早期教育|爱乐国际早教|儿童早教|早教 ">
 <meta name="description" content="爱乐国际早教是全球最具专业的早教课程体系，集亲子早教、儿童早教、早期教育及幼教、早教加盟为一体的专业早教机构，30年的国际历  史，全国50家高品质中心，六大课程体系覆盖0-8岁，十万家庭的共同选择。先进的教育理念、专业的早教团队，科学的儿童课程，促进宝宝  健康成长。">
-<!--[if IE 6]>
-<script type="text/javascript" src="/templates/default/js/DD_belatedPNG_0.0.8a-min.js" ></script>
-<script type="text/javascript">
-	DD_belatedPNG.fix('*');
-</script>
-<![endif]-->
+@include('newsJsCss')
 </head>
 
 <body>
-
-<!--top logo nav-->
-
-<div class="sy_top">
-   <div class="sy_top1">
-    <div class="hd-main clearfix" id="header">
-        <div class="sy_top2">
-           <ul>
-              <li class="ai_yiwen"><a target="_blank" href="http://www.kindermusik.com/ ">English</a></li>
-              <li class="ai_shu1">&nbsp;|&nbsp;</li>
-              <li class="ai_sousuo1"><a href="/findus/index.html">查找身边的爱乐</a></li>
-              <li class="ai_sousuo"></li>
-              <li class="ai_shu1">&nbsp;|&nbsp;</li>
-              <li class="ai_danhua">400-688-2011</li>
-              <script src="/common/login_show.php"></script>
-              <li>爱乐乐享 爱乐国际早教欢迎您！&nbsp;</li>
-              <br style=" clear:both;" />
-           </ul>
-         </div>
-        
-        
-        
-        <div class="navs sy_nav sy_nav1">
-            <a class="def-nav def-nav2 naeuye1" href="/index.html"></a>
-            <a class="def-nav def-nav1 naeuye2" href="/ourstory/index.html"></a>
-            <div class="def-nav current has-pulldown-special">
-                <a class="pulldown-nav  def-nav1 naeuye3" href="/course/index.html"></a>
-                <div class="pulldown app-url">
-                    <div class="content">
-                    
-                         <div class="suen_sbea">
-                        <a class="li disk ciauy" href="/music/index.html">
-                            <span class="icon"><img src="/templates/default/images/kecheng1_01.png" /></span>
-                            <span class="text">Kindermuisk课程</span>
-                        </a>
-                        <a class="li tongxunlu" href="/fitbaby/index.html">
-                            <span class="icon"><img src="/templates/default/images/kecheng1_02.png" /></span>
-                            <span class="text">幼儿体适能</span>
-                        </a>
-                        <a class="li xiangce" href="/fitkid/index.html">
-                            <span class="icon"><img src="/templates/default/images/kecheng1_03.png" /></span>
-                            <span class="text">儿童体适能</span>
-                        </a>
-                        <a class="li wenzhang" href="/art/index.html">
-                            <span class="icon"><img src="/templates/default/images/kecheng1_04.png" /></span>
-                            <span class="text">艺术课程</span>
-                        </a>
-                        <a class="li note" href="/cookingfun/index.html">
-                            <span class="icon"><img src="/templates/default/images/kecheng1_05.png" /></span>
-                            <span class="text">厨趣课程</span>
-                        </a>
-                        <a class="li duanxin" href="/letterland/index.html">
-                            <span class="icon"><img src="/templates/default/images/kecheng1_06.png" /></span>
-                            <span class="text">英语课程</span>
-                        </a>
-						 <a class="li duanxin" href="/watergym/index.html">
-                            <span class="icon"><img src="/templates/default/images/kecheng1_07.png" /></span>
-                            <span class="text">水育课程</span>
-                        </a>
-                       </div>
-                    </div>
-               
-                </div>
-            </div>
-            
-           <a class="def-nav def-nav1 naeuye4" href="/ilovegym/index.html"></a>
-           <a class="def-nav def-nav1 naeuye5" href="/shunjian/index.html"></a>
-           <a class="def-nav def-nav1 naeuye6" href="/ailecity/index.html"></a>
-           <a class="def-nav def-nav1 naeuye7" href="/joinus/index.html"></a>
-           
-        </div>
-        
-        <div class="sy_logo"><a href="/index.html"></a></div>
-        
-    </div>
-</div>
-</div>
-
-
-<!--top logo nav---end-->
 <div class="boss">
+@include('GeneralHeader')
   <!--通用标题-->
-    <div class="tyongtop">
-      <div class="tybiaoti"><img src="/templates/default/images/alsy_biao.png"></div>
-    </div>
+@include('newsTopTitle')
     
     <div class="bs_baisbj">
        <div class="tony_yong">
@@ -315,7 +229,7 @@ else if (obj.value=="12")
                   <a>免费试听</a>
                 </div>
                 
-                <!--获赠课程体验-->
+<!--获赠课程体验-->
                 <div class="ai_shtai info">
                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
 				   <form action="/actions.php?do=kecheng" id="kechengsave" method="post" name="kechengsave">
@@ -371,12 +285,12 @@ else if (obj.value=="12")
         
                 </div>
                 
-                <!--获赠课程体验 end-->   
+ <!--获赠课程体验 end-->   
                 
               
                 
                 
-                 <!--城市 end-->   
+<!--城市 end-->   
 <script class="resources library" src="/templates/default/js/area.js" type="text/javascript"></script>
     
  <script type="text/javascript">_init_area();</script>
@@ -395,73 +309,11 @@ var showArea = function(){
 Gid('s_county').setAttribute('onchange','showArea()');
 </script>
 
- <!--城市 end-->   
+ <!--城市 end--> 
 
                 
-                <!--出生日期js开始-->        
-      <script type="text/javascript" language="javascript">
-                            var curdate = new Date();
-                            var year = document.getElementById("year");
-                            var month = document.getElementById("month");
-                            var day = document.getElementById("day");
-                            //绑定年份月分的默认
-                            function add() {
-                                var curyear = curdate.getFullYear();
-                                var minyear = curyear - 14;
-                                var maxyear = curyear + 0;
-        for (maxyear; maxyear >= minyear; maxyear = maxyear - 1) {
-                                    year.options.add(new Option(maxyear, maxyear));
-                                }
-                                for (var mindex = 1; mindex <= 12; mindex++) {
-                                    month.options.add(new Option(mindex, mindex));
-                                }
-                            }
-
-                            //判断是否是闰年
-                            function leapyear(intyear) {
-                                var result = false;
-                                if (((intyear % 400 == 0) && (intyear % 100 != 0)) || (intyear % 4 == 0)) {
-                                    result = true;
-                                }
-                                else {
-                                    result = false;
-                                }
-                                return result;
-                            }
-                            //绑定天数
-                            function addday(maxday) {
-                                day.options.length = 1;
-                                for (var dindex = 1; dindex <= maxday; dindex++) {
-                                    day.options.add(new Option(dindex, dindex));
-                                }
-                            }
-                            function changeday() {
-                                if (year.value == null || year.value == "") {
-                                    alert("请先选择年份！");
-                                    return false;
-                                }
-                                else {
-                                    if (month.value == 1 || month.value == 3 || month.value == 5 || month.value == 7 || month.value == 8 || month.value == 10 || month.value == 12) {
-                                        addday(31);
-                                    }
-                                    else {
-                                        if (month.value == 4 || month.value == 6 || month.value == 9 || month.value == 11) {
-                                            addday(30);
-                                        }
-                                        else {
-                                            if (leapyear(year.value)) {
-                                                addday(29);
-                                            }
-                                            else {
-                                                addday(28);
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            window.onload = add;
-                        </script>           
-                 <!--出生日期js结束-->        
+          
+<!--出生日期js结束-->        
                 
              
              
@@ -531,7 +383,7 @@ Gid('s_county').setAttribute('onchange','showArea()');
                  
                  <div class="alsy_con1_right_b">
                       <ul>
-					                           <li><a href="/wzxw/1453277791.html" class="zi">爱乐乐享南京隆重开业</a>2016-01-20</li>
+					                         <li><a href="/wzxw/1453277791.html" class="zi">爱乐乐享南京隆重开业</a>2016-01-20</li>
 						                        <li><a href="/wzxw/1453198033.html" class="zi">Gymmy的南京新家欢迎您</a>2016-01-19</li>
 						                        <li><a href="/wzxw/1451554888.html" class="zi">Gymmy带大家探班爱乐乐享龙湖中心</a>2015-12-31</li>
 						                        <li><a href="/wzxw/1448865895.html" class="zi">爱乐国际荣膺2015中国知名儿童教育机构品牌</a>2015-11-30</li>
@@ -566,135 +418,7 @@ Gid('s_county').setAttribute('onchange','showArea()');
     </div>
     
 </div>
-<!--版权 版块-->
-<div class="ai_banquan">
-    <div class="banqi_sj">
-     <div class="ke_fhtop"><a href="#"><img src="/templates/default/images/s_fhtop.png"></a></div>
-    </div>    
-</div>  
-<div class="ai_banqian_da">
-<div class="ai_banqian">
-  <div class="ai_banuk">
-   <img src="/templates/default/images/ilovegym.png">
-  </div>
-  <div class="ai_banuh">
-     <div class="ai_ilove">
-       <ul class="ai_ilove3 ai_ilove4">
-            <li class="ai_biei">爱乐课程</li>
-            <li><a target="_blank" href="/yinyue/index.html">Kindermusik</a></li>
-            <li><a target="_blank" href="/yundong/index.html">幼儿体适能</a></li>
-            <li><a target="_blank" href="/yundongtishineng/index.html">儿童体适能</a></li>
-            <li><a target="_blank" href="/meishu/index.html">艺术课程</a></li>
-            <li><a target="_blank" href="/chuqu/index.html">厨趣课程</a></li>
-            <li><a target="_blank" href="/englishcourse/index.html">英语课程</a></li>
-            <li><a target="_blank" href="/WaterGym/index.html">水育课程</a></li>
-         </ul>
-       <ul class="ai_ilove3 ai_ilove5">
-            <li class="ai_biei">爱乐派对</li>
-			            <li><a href="/party/1414403994.html">公主主题</a></li>
-			            <li><a href="/party/1414404066.html">骑士主题</a></li>
-			            <li><a href="/party/1414404200.html">印第安主题</a></li>
-			            <li><a href="/party/1418008109.html">魔法之夜</a></li>
-			            <li><a href="/party/1418008891.html">战斗吧，宝贝</a></li>
-			         </ul>
-         <ul class="ai_ilove3 ai_ilove4">
-            <li class="ai_biei">爱乐声音</li>
-			            <li><a target="_blank" href="/news/index.html">最新动态</a></li>
-			            <li><a target="_blank" href="/huodong/index.html">活动早知道</a></li>
-			            <li><a target="_blank" href="/Gymmerbuzz/index.html">精彩回眸</a></li>
-			            <li><a target="_blank" href="/yueerhuati/index.html">育儿话题</a></li>
-			            <li><a target="_blank" href="/shunjian/index.html">精彩瞬间</a></li>
-			         </ul>
-         <ul class="ai_ilove3">
-           <li class="ai_biei">我的爱乐</li>
-           <li><a target="_blank" href="/ailecity/index.html">我的爱乐</a></li>
-            <li><a target="_blank" href="/ailecity/index.html">明星老师博客</a></li>
-            <li><a target="_blank" href="/ailecity/index.html">品牌活动</a></li>
-             <li><a target="_blank" href="http://wap.koudaitong.com/v2/showcase/feature?alias=ou87oyhn">官方微店</a></li>
-         </ul>
-       <ul class="ai_ilove3">
-         <li class="ai_biei">成为我们</li>
-            <li><a target="_blank" href="/jiaruwomen/index.html">加入我们</a></li>
-            <li><a target="_blank" href="/jiameng/index.html">加盟爱乐</a></li>
-            <li><a target="_blank" href="/contactus/index.html">联系我们</a></li>
-            
-            
-         </ul>
-    </div>
-     <div class="ai_ilove1">
-       <ul class="ai_ilove3 ai_ilove6">
-           <li class="ai_biei">爱乐伙伴</li>
-            <li><a href="http://www.fumubidu.com.cn/" target="_blank">父母必读</a></li>
-<li><a href="http://www.youerhuabao.com/" target="_blank">幼儿画报</a></li>
-<li><a href="http://www.mamypoko.cn/" target="_blank">妈咪宝贝</a></li>
-<li><a target="_blank" href="http://www.xgdj.com.cn/">儿童摄影</a></li>
-<li><a target="_blank" href="http://exmail.qq.com/login">爱乐邮箱</a></li>
-            
-            
-       </ul>
-       <ul class="ai_ilove3 ai_ilove7">
-           <li class="ai_biei"></li>
-           <li><a href="http://baby.sina.com.cn/" target="_blank">新浪育儿</a></li>
- <li><a href="http://baobao.sohu.com/" target="_blank">搜狐母婴</a></li>
- <li><a href="http://www.chinawch.com/" target="_blank">中国妇幼保健网</a></li>
-       </ul>
-        <ul class="ai_ilove03">
-           <li class="ai_biei"> </li>
-      <li> <a href="http://www.cmcha.org/" target="_blank">中华妇幼保健协会</a></li>
- <li><a href="http://www.ysyy.org/" target="_blank">中国优生优育协会</a></li>
- <li><a href="http://www.bjogh.com.cn/" target="_blank">北京妇产医院</a></li>
- <li><a href="http://weibo.com/shouersuo" target="_blank">首都儿研所</a></li>
- <li><a href="http://weibo.com/amcare?sudaref=baby.sina.com.cn" target="_blank">北京美中宜和</a></li>
-       </ul>
-     
-     </div>
-     <div class="ai_ilove2">
-      <ul class="ai_ilove3 ai_ilove8">
-	  	<div class="alck_ewm1" id="alck_ewm2" >
-              <img src="/templates/default/images/er_wei_ma.jpg" width="250" height="250">
-          </div>
-           <li class="ai_biei">Find us on </li>
-           <table width="106" border="0" cellspacing="0" cellpadding="0">
-           <tr>
-            <th width="43" height="35" align="left" scope="row"><img src="/templates/default/images/weixin.png" width="29" height="24"></th>
-            <td width="63"><a href="#" onMouseOver="tcc_show1()" onMouseOut="tcc_show1()">微信</a></td>
-           </tr>
-           <tr>
-            <th height="35" align="left" scope="row"><img src="/templates/default/images/qwibo.png" width="26" height="22"></th>
-            <td><a href="http://weibo.com/ilovegymbj" target="_blank">微博</a></td>
-           </tr>
-           <tr>
-            <th height="35" align="left" scope="row"><img src="/templates/default/images/guge.png" width="26" height="22"></th>
-            <td height="30"><a href="#" >Google+</a></td>
-           </tr>
-           <tr>
-            <th height="35" align="left" scope="row"><img src="/templates/default/images/FF.png" width="25" height="25"></th>
-            <td><a href="#" target="_blank">Facebook</a></td>
-           </tr>
-          </table>
 
-           
-       </ul>
-     </div>
-     <br style="clear:both;"/>
-  </div>
-
-<div class="ai_banquanxx">Copyright &copy; 2016 - 2020 I Love Gym China. All rights Reserved. 京IPC备10032270号-1
-&nbsp;&nbsp;爱乐乐享 爱乐国际早教中心
-
-   </div>
-</div>
-</div><script type="text/javascript" charset="utf-8" src="http://lead.soperson.com/20000301/10045318.js"></script>
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?61de223b614ba7d411dac108b01a95fd";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
 
 </div>
 </body>

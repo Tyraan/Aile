@@ -80,3 +80,79 @@ var _hmt = _hmt || [];
 })();
 </script>
 <link type="text/css" href="/templates/default/css/style10_15.css" rel="stylesheet">
+
+<script type="text/javascript" charset="utf-8" src="http://lead.soperson.com/20000301/10045318.js"></script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?61de223b614ba7d411dac108b01a95fd";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<!--出生日期js开始-->        
+<script type="text/javascript" language="javascript">
+                            var curdate = new Date();
+                            var year = document.getElementById("year");
+                            var month = document.getElementById("month");
+                            var day = document.getElementById("day");
+                            //绑定年份月分的默认
+                            function add() {
+                                var curyear = curdate.getFullYear();
+                                var minyear = curyear - 14;
+                                var maxyear = curyear + 0;
+        for (maxyear; maxyear >= minyear; maxyear = maxyear - 1) {
+                                    year.options.add(new Option(maxyear, maxyear));
+                                }
+                                for (var mindex = 1; mindex <= 12; mindex++) {
+                                    month.options.add(new Option(mindex, mindex));
+                                }
+                            }
+
+                            //判断是否是闰年
+                            function leapyear(intyear) {
+                                var result = false;
+                                if (((intyear % 400 == 0) && (intyear % 100 != 0)) || (intyear % 4 == 0)) {
+                                    result = true;
+                                }
+                                else {
+                                    result = false;
+                                }
+                                return result;
+                            }
+                            //绑定天数
+                            function addday(maxday) {
+                                day.options.length = 1;
+                                for (var dindex = 1; dindex <= maxday; dindex++) {
+                                    day.options.add(new Option(dindex, dindex));
+                                }
+                            }
+                            function changeday() {
+                                if (year.value == null || year.value == "") {
+                                    alert("请先选择年份！");
+                                    return false;
+                                }
+                                else {
+                                    if (month.value == 1 || month.value == 3 || month.value == 5 || month.value == 7 || month.value == 8 || month.value == 10 || month.value == 12) {
+                                        addday(31);
+                                    }
+                                    else {
+                                        if (month.value == 4 || month.value == 6 || month.value == 9 || month.value == 11) {
+                                            addday(30);
+                                        }
+                                        else {
+                                            if (leapyear(year.value)) {
+                                                addday(29);
+                                            }
+                                            else {
+                                                addday(28);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            window.onload = add;
+                        </script> 
