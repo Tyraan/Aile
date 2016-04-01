@@ -1,0 +1,6 @@
+{
+    "require": {
+        "twbs/bootstrap": "^3.3"
+        "stevenyangecho/laravel-u-editor": "~1.3"
+    }
+}
