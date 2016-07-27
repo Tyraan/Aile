@@ -1,65 +1,47 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
-
 <head>
     <meta charset="UTF-8">
-    <title>ueditor demo</title>
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <title>test page</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href ="/css/test.css"> 
+     <script type="text/javascript" src = "/js/jquery-2.2.2.js"></script>
+     <script type="text/javascript" src="/js/test.js" ></script>
+   
 </head>
-
 <body>
-<script type="text/javascript" src="/js/jquery-2.2.2.js"></script>  
-  <script type="text/javascript" charset="utf-8" >
-  $(document).ready(function(){
-    $('#inputimage').click(function(){
-    
-    var requestData ={"action": "listimage", "start": 0, "size": 20};
-    $.get('/UEditor/php/controller.php',requestData,function(data){       
-                
-         var returnedObj =  eval("("+data+")");         
-          if(returnedObj.state == "SUCCESS"){            
-            $('#imageList').empty();
-            var htmlinput = "";
-            //var imageList = eval("("+returnedObj.list+")");
-            $.each(returnedObj.list,function(key,value){              
-               htmlinput+= "<input type='hidden' name='image[]' value="+value+">"
-             });
-            $('#imageList').html(htmlinput);
-          }
-         });
-
-    });
-    });
-
-    </script>
-    {{ var_dump($name) }}
-
-    <form action="{{ URL('/test' )}}" method="post">
-     {!! csrf_field() !!}
-        <!-- 加载编辑器的容器 -->
-        <script id="container" name="content" type="text/plain">
-            
-        </script>
-
-        <div id = "imageList" >
-        </div>
+<section class="stage">
+  <figure class="ball"><span class="shadow"></span></figure>
+</section>
+<div class="container-fluid">
 
 
-        <input type="button" id="inputimage" name="imageinput" value="试试获得图片列表">        
-        <input type="submit" value="提交" > 
+<form class = "original" id = 'firstForm'>
+<div class ="page-header">
+ <h3><span id = 'firstspan' class ='bv vp'>
+ <p class = "original" >She will be loved
+<label class="label label-info "><small>A poem</small></label>  
+</p>
+</span>
+</h3>
+</div>
+<table class = 'firstol'>
 
 
+</span></h4>
 
-    </form>
-    <!-- 配置文件 -->
-    <script type="text/javascript" src="/UEditor/ueditor.config.js"></script>
-    <!-- 编辑器源码文件 -->
-    <script type="text/javascript" src="/UEditor/ueditor.all.js"></script>
-    <!-- 实例化编辑器 -->
-    <script type="text/javascript">
-        var editor = UE.getEditor('container');
-    </script>
 
+ </div>
+ </div>
+
+</table>
+<div class="btn-group" role='group'>
+<button onclick="addInput()" type="button" class ="btn btn-lg btn-default" >
+<span class="glyphicon glyphicon-sort-by-attributes">添加文本 </span>
+</button> 
+<button onclick="addTotalPoem()" type="button"  class ="btn btn-lg btn-primary"><span class="glyphicon glyphicon-align-center" aria-hidden="true">添加诗句</span></button>
+<button class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-heart">赞</span></button>
 </body>
-
-</html>
+</html> 

@@ -13,15 +13,10 @@
 
 Route::get('/','HomeController@index');
 Route::group(['prefix'=>'home',],function(){
-
 	Route::controller('/','HomeController'); 
-	Route::get('/','HomeController@index');
-	
-
+	Route::get('/','HomeController@index');	
     }
 	);
-
-
 
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
@@ -39,7 +34,6 @@ Route::controllers([
   Route::resource('center','centerController');
 });
 */
-
 Route::controller("test","tryController");
 Route::resource('courseap','CourseAppointmentController');
 Route::resource('center','centerController');
