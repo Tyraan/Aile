@@ -32,10 +32,8 @@
 
 </span></h4>
 
-
  </div>
  </div>
-
 </table>
 <div class="btn-group" role='group'>
 <button onclick="addInput()" type="button" class ="btn btn-lg btn-default" >

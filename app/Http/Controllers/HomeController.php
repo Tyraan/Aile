@@ -36,7 +36,7 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('main')->with('session',session());
+		return view('home')->with('session',session());
 	}
 
 	public function getStory()
