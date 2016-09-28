@@ -15,7 +15,9 @@
     @include("viewfile/AboutHistory")
     @include("viewfile/AboutBrand")
     @include("viewfile/AboutIdea")
+    @include("HonorAward")
+
     @include("GeneralPageBottom")
-    @include("GeneralFooter")    
+    @include("GeneralFooter")   
 
 </html>

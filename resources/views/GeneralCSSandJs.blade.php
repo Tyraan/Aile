@@ -1,105 +1,67 @@
+<link rel="stylesheet" type="text/css" href="css/global.css" />
+<link rel="stylesheet" type="text/css" href="css/page.css" />
 <script src="/js/jquery-1.7.2.min.js"></script>
 <script src="/js/jquery.easing.1.3.js"></script>
 <script src="/js/jquery.transit.min.js"></script>
 <script src="/js/fun.js"></script>
 <script src="/js/global.js"></script>
-<script src="/js/plus/jquery.mScroll.js"></script>
+<script src="js/plus/jquery.mScroll.js"></script>
+<script src="js/plus/sHover.min.js"></script>
+<!-- 加盟和课程弹出页代码 -->
+<script type="text/javascript" charset="utf-8" src="http://lead.soperson.com/20000301/10045318.js"></script>
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+function mobile_device_detect(url)
+{
+
+        var thisOS=navigator.platform;
+
+        var os=new Array("iPhone","iPod","android","Nokia","SymbianOS","Symbian","Windows Phone","Phone","Linux armv71","MAUI","UNTRUSTED/1.0","Windows CE","BlackBerry","IEMobile");
+
+ for(var i=0;i<os.length;i++)
+        {
+
+ if(thisOS.match(os[i]))
+        {   
+  window.location=url;
+ }
+  
+ }
+ //做这一部分是因为Android手机的内核也是Linux
+ //但是navigator.platform显示信息不尽相同情况繁多,因此从浏览器下手，即用navigator.appVersion信息做判断
+  var check = navigator.appVersion;
+
+  if( check.match(/linux/i) )
+          {
+   //X11是UC浏览器的平台 ，如果有其他特殊浏览器也可以附加上条件
+   if(check.match(/mobile/i) || check.match(/X11/i))
+                 {
+   window.location=url;
+   }  
+ }
+
+ //类in_array函数
+ Array.prototype.in_array = function(e)
+ {
+  for(i=0;i<this.length;i++)
+  {
+   if(this[i] == e)
+   return true;
+  }
+  return false;
+ }
+} 
+mobile_device_detect("http://www.ilovegym.com/mobile/");
+</SCRIPT>
 <script>
-$("body").addClass("home");
-$(function(){	
-	var bh=$(window).height()-$(".head").outerHeight()-$(".header").outerHeight();
-	$(".banner").height(bh);
-	$("body").addClass("done");
-});
-$(window).resize(function(){
-	var bh=$(window).height()-$(".head").outerHeight()-$(".header").outerHeight();
-	$(".banner").height(bh);
-});
-
-$('.banner .frame').mScroll({
-		     auto : 1,                   //自动开始
-		direction : "h",                 //滚动方向,h横向,v纵向
-		    dtype : "left",              //正反方向
-		  isfocus : 1,                   //是否作为焦点图
-		  minsize : 1,                   //最小数量
-		    speed : 800,                 //滚动速度
-		   easing : "easeInOutQuart",                  //缓冲类型
-			delay : 5000,                //自动滚动间隔
-			  nav : ".banner .nav a",                //导航按钮
-        scrollnav : 0,                   //导航滚动
-    nav_direction : "h",                 //导航方向,h横向,v纵向
-			arrow : 1,                   //是否反转
-			cycle : 1,                   //是否循环
-		mousestop : 0,                   //鼠标划入停止
-	   mousewheel : 0                    //开启滚轮事件
-});
-$('.home1 .ilovegym .province .frame').mScroll({
-		     auto : 0,                   //自动开始
-		direction : "h",                 //滚动方向,h横向,v纵向
-		    dtype : "left",              //正反方向
-		  isfocus : 1,                   //是否作为焦点图
-		  minsize : 1,                   //最小数量
-		    speed : 500,                 //滚动速度
-		   easing : "",                  //缓冲类型
-			delay : 5000,                //自动滚动间隔
-			  nav : ".home1 .ilovegym .province .nav a",                //导航按钮
-        scrollnav : 0,                   //导航滚动
-    nav_direction : "h",                 //导航方向,h横向,v纵向
-			arrow : 1,                   //是否反转
-			cycle : 1,                   //是否循环
-		mousestop : 1,                   //鼠标划入停止
-	   mousewheel : 0                    //开启滚轮事件
-});
-
-$(".home0 .part2 .item").hover(
-	function(){
-		$(".home0 .part2 .list .c").css("left",$(this).index()*198+7).removeClass("show");
-		$(".home0 .part2 .list .c").addClass("show");
-	},
-	function(){
-		$(".home0 .part2 .list .c").removeClass("show");
-	}
-);
-
-$(window).scroll(function(){
-	if(scrollact(".home0",200)){
-		if(!$(".home0").hasClass("show")){
-			$(".home0").addClass("show");
-		}
-	}
-	if(scrollact(".home0 .part2",0)){
-		if(!$(".home0 .part2").hasClass("show")){
-			$(".home0 .part2").addClass("show");
-		}
-	}
-	if(scrollact(".home1",100)){
-		if(!$(".home1").hasClass("show")){
-			$(".home1").addClass("show");
-		}
-	}
-	if(scrollact(".home2",100)){
-		if(!$(".home2").hasClass("show")){
-			$(".home2").addClass("show");
-		}
-	}
-	if(scrollact(".home3",100)){
-		if(!$(".home3").hasClass("show")){
-			$(".home3").addClass("show");
-		}
-	}
-	if(scrollact(".home4",100)){
-		if(!$(".home4").hasClass("show")){
-			$(".home4").addClass("show");
-		}
-	}
-});
-
-if(!isCss3("transition")){
-	$(".home0").addClass("show");
-	$(".home0 .part2").addClass("show");
-	$(".home1").addClass("show");
-	$(".home2").addClass("show");
-	$(".home3").addClass("show");
-	$(".home4").addClass("show");
-}
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?287002be1059509e17e9225067ddb064";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
 </script>
+
