@@ -206,6 +206,10 @@ $(".passwd").each(function(index, element) {
 	}
 });
 
+$('.nav_float li.a4').hover(function(){
+	$(this).find('.er').stop().fadeToggle(300);
+})
+
 
 //end
 });

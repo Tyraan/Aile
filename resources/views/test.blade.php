@@ -7,13 +7,27 @@
     <title>test page</title>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href ="/css/test.css"> 
-     <script type="text/javascript" src = "/js/jquery-2.2.2.js"></script>
+     <script type="text/javascript" src = "/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/js/"></script>
      <script type="text/javascript" src="/js/test.js" ></script>
    
 </head>
 <body>
+<div class="container">  
+	<video class="bg-video scalein anim active" loop mute controls poster="/image/home0.jpg">
+		<source src="/video/Aile.mp4" type="video/mp4">
+	</video>
+</div>
+
+
+
+
+
+
+
 <section class="stage">
-  <figure class="ball"><span class="shadow"></span></figure>
+  <figure class="ball">
+  <span class="shadow"></span></figure>
 </section>
 <div class="container-fluid">
 
