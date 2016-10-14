@@ -15,7 +15,7 @@ class AdminHomeController extends Controller {
 	public function index()
 	{
 		//return view('Admin')->withPages(Page::all());
-		return view('AdminHome');
+		return view('admin.AdminHome');
 	}
 
 	/**

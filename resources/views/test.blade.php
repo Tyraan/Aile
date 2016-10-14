@@ -7,8 +7,8 @@
     <title>test page</title>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href ="/css/test.css"> 
-     <script type="text/javascript" src = "/js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="/js/"></script>
+     <script type="text/javascript" src = "/js/jquery-1.7.2.min.js"></script> 
+     <script type="text/javascript" src = "/js/bootstrap.min.js"></script> 
      <script type="text/javascript" src="/js/test.js" ></script>
    
 </head>
@@ -18,7 +18,6 @@
 		<source src="/video/Aile.mp4" type="video/mp4">
 	</video>
 </div>
-
 
 
 
