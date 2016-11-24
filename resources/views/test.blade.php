@@ -14,9 +14,9 @@
 </head>
 <body>
 <div class="container">  
-	<video class="bg-video scalein anim active" loop mute controls >
-		<source src="/video/Aile.mp4" type="video/mp4">
-	</video>
+
+
+
 </div>
 
 
