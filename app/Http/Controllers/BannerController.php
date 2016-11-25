@@ -8,12 +8,18 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Banner;
 use App\Picture;
+use Redirect, Input, Response;
+
 
 /*
+ * Banner对应首页的banner显示图，Banner Object 有且只有一个 id =1；
+ * 每个banner图 对应一个 picture object ，picture object 和Banner Object 是多对一关系，所有增删改查均是在
+ * 对Banner object 下的picture Object 操作。
  * */
-Banner对应首页的banner显示图
+
 class BannerController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -46,13 +52,21 @@ class BannerController extends Controller
      */
     public function store(Request $request)
     {
+
         //banner添加图片
+        $allowed_extensions = ["png", "jpg", "gif"];
         $banner = App\Banner::firstOrCreate(['id' => '1']);
+        $file=$request->file('picture');
+        if($file->getClientOriginalExtension() && !in_array($file->getClientOriginalExtension(),$allowed_extensions)){
+            return['error'=>"图片后缀必须是：png，jpg 或者 gif"];
+        }
         $picture =new App\Picture([
             'location' =>$location;
         ]);
-        $banner->pictures()->save($picture);
 
+        $banner->pictures()->save($picture);
+        //todo 添加图片上传
+        $this->show();
     }
 
     /**

@@ -14,7 +14,6 @@ return [
     */
 
     'debug' => env('APP_DEBUG', true),
-
     /*
     |--------------------------------------------------------------------------
     | Application URL
@@ -194,5 +193,10 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
 
     ],
+
+    'uploadFolder'=>[
+        'Banner'=>"public\uploadimage",
+
+    ]
 
 ];
