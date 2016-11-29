@@ -142,10 +142,12 @@ return [
         App\Providers\AppServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-       /*
+        /*
         * HTML module provider
         */
-       //Collective\Html\HtmlServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        //laravel 图像处理类库
+        Intervention\Image\ImageServiceProvider::class
 
         
 
@@ -197,8 +199,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
          //由html模块 提供该功能
-       /* 'Form' => Collective\Html\FormFacade::class,
-        'Html' => Collective\Html\HtmlFacade::class,*/
+       'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+        //Image 类库提供
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 
