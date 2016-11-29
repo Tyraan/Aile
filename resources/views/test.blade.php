@@ -15,19 +15,11 @@
 <body>
 <div class="container">
 </div>
-
-
-
-
-
-
 <section class="stage">
   <figure class="ball">
   <span class="shadow"></span></figure>
 </section>
 <div class="container-fluid">
-
-
 <form class = "original" id = 'firstForm'>
 <div class ="page-header">
  <h3><span id = 'firstspan' class ='bv vp'>
@@ -38,10 +30,7 @@
 </h3>
 </div>
 <table class = 'firstol'>
-
-
 </span></h4>
-
  </div>
  </div>
 </table>
