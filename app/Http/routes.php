@@ -41,7 +41,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
  * 测试用路由
  */
 Route::controller("test","tryController");
-
 Route::resource('courseap','CourseAppointmentController');
 Route::resource('center','centerController');
 

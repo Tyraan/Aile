@@ -28,7 +28,7 @@ class tryController extends Controller
 
     }
     public function test(Request $request){
-
+        return 0;
 
     }
 
@@ -71,5 +71,16 @@ Comes back and begs me to catch her every time she falls";
         if($return_poem >(sizeof($poem_arr)-1)){ $return_poem = 0;}
         $request->session()->put('poem',$return_poem+1);
         return $poem_arr[$return_poem];
+
+
+
+}
+    public function postUpdate(Request $request){
+
+
+
+        return 'image received!';
+
+    //
     }
 }
