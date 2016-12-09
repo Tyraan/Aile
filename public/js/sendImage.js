@@ -1,16 +1,16 @@
 /*
-* Tyraan
-* 2016-12-7
-* 需要Jquery 1.3 以上版本
-* sendImage function ：用ajax 传送图片到后台。
-* todo: 需要把sendImage 模块化，以方便复用。
-* */
+ * Tyraan
+ * 2016-12-7
+ * 需要Jquery 1.3 以上版本
+ * sendImage function ：用ajax 传送图片到后台。
+ * todo: 需要把sendImage 模块化，以方便复用。
+ * */
 
 
 /*
-*  param:None
-*
-* */
+ *  param:None
+ *
+ * */
 function sendImage(){
     var file=$("input[name='image']").val();
     var image=$("input[name='image']")[0].files[0];
@@ -41,5 +41,3 @@ function sendImage(){
         alert("此处只能传 png，gif，或者jpg。");
     }
 }
-
-

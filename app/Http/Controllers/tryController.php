@@ -1,10 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Banner;
 use Illuminate\Http\Request;
 use Input;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\BannerController;
 
 class tryController extends Controller
 {
@@ -75,11 +77,13 @@ Comes back and begs me to catch her every time she falls";
 
 
 }
+
+
     public function postUpdate(Request $request){
 
 
 
-        return 'image received!';
+        return response()->json(['status' => 'img saved', 'action' => 'refresh table']);
 
     //
     }

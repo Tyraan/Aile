@@ -19,11 +19,11 @@
 {!! Form::open(['url'=>'test/update','id'=>'imageForm']) !!}
 {!! Form::label('选择要上传的 banner图 ')!!}
 {!! Form::file('image',$attributes=['type'=>'file','class'=>'btn btn-primary','buttonName'=> "btn-primary"])!!}
-<button class ="btn btn-success btn-lg" onClick="sendImage()" value=""> 上传该图片 </button>
+<button type="button" class ="btn btn-success btn-lg" onClick="sendImage()" value=""> 上传该图片 </button>
 {!! Form::close() !!}
-
-
 </div>
+
+
 </body>
 </html>
 </script>

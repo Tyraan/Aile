@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Page;
+use App\Banner;
 
 class AdminHomeController extends Controller {
 
@@ -14,8 +15,9 @@ class AdminHomeController extends Controller {
 	 */
 	public function index()
 	{
-		//return view('Admin')->withPages(Page::all());
-		return view('admin.AdminHome');
+		$pictures = Banner::firstOrNew(['id'=>1])->pictures;
+
+		return view('admin.AdminHome')->with('pictures',$pictures);
 	}
 
 	/**
