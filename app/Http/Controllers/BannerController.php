@@ -53,17 +53,8 @@ class BannerController extends Controller
     public function store(Request $request)
     {
         //banner添加图片
-        $allowed_extensions = ["png", "jpg", "gif"];
+
         $banner = App\Banner::firstOrCreate(['id' => '1']);
-        $file=$request->file('picture');
-        $randomstr = random(5, '123456789abcdefghijklmnpqrstuvwxyzABCDEFGHIJKLMNPQRSTUVWXYZ');
-        $newname  = date('Ymd',time()).$randomstr."."$file->getClientOriginalExtension();
-        $thumbname = 'thumbnail_'.$newname;
-        if($file->getClientOriginalExtension() && !in_array($file->getClientOriginalExtension(),$allowed_extensions)){
-            return['error'=>"图片后缀必须是：png，jpg 或者 gif"];
-        }
-        Image::make($file)->resize(200,200)->save('public/image/banner/'.$thumbname);
-        Image::make($file)->save('public/image/banner/'.$newname);
 
         $picture =new App\Picture([
             'location' =>$newname,
