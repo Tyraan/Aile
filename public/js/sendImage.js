@@ -40,4 +40,30 @@ function sendImage(){
     }else{
         alert("此处只能传 png，gif，或者jpg。");
     }
+
+}
+
+/*
+*
+* */
+function delteImage($id) {
+    var fm = new FormData();
+    $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
+    fm.append('id'=>$id);
+    $.ajax(
+        {
+            url: 'admin/banner',
+            type: 'POST',
+            data:fm,
+            success:function (returnJson) {
+                var a = "status :" + returnJson.status;
+                var b = " action : "+ returnJson.action;
+                $("input[name='image']").val("");
+                alert(a+b);
+
+            }
+        }
+    )
+
+
 }

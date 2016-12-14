@@ -112,12 +112,14 @@ class BannerController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
+     * 删除
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        //
+       Picture::destory($id);
+
+
     }
 }
