@@ -22,7 +22,7 @@ function sendImage(){
         var fm = new FormData();
         fm.append('image',image);
         $.ajax({
-            url:'test/update',
+            url:'admin/banner',
             type:"POST",
             data:fm,
             //因为要传图，所以禁止Jquery再对Data做处理

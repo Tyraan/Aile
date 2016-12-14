@@ -11,16 +11,20 @@
 </head>
 <body>
 <div class="main-pageadmin">
+
+    <p> 首页的banner控制 </p>
     <div class="show-bannerimage">
     @if(isset($pictures))
         @foreach ($pictures as $pic)
-            <img src="{{$pic->thumbnail }}" />
+
+            <img src="{{ '/image/banner/'.$pic->thumbnail }}" />
         @endforeach
     @endif
     </div>
 
     <div class="imageform">
-        {!! Form::open(['url'=>'test/update','id'=>'imageForm']) !!}
+
+        {!! Form::open(['url'=>'admin/banner','id'=>'imageForm']) !!}
         {!! Form::label('选择要上传的 banner图 ')!!}
         {!! Form::file('image',$attributes=['type'=>'file','class'=>'btn btn-primary','buttonName'=> "btn-primary"])!!}
         <button type="button" class ="btn btn-success btn-lg" onClick="sendImage()" value=""> 上传该图片 </button>

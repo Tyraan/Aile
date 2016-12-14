@@ -16,7 +16,6 @@ class CreatePictureTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->integer('banner_id')->index();
-
             $table->string('location');
         });
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
@@ -19,7 +19,7 @@ use Redirect, Input, Response;
 
 class BannerController extends Controller
 {
-
+    use \App\Http\Controllers\Traits\ImageTrait;
     /**
      * Display a listing of the resource.
      *
@@ -40,7 +40,7 @@ class BannerController extends Controller
     public function create()
     {
         //首页的banner只有一个，所以只需要创建一个banner对象
-        $banner = App\Banner::firstOrCreate(['id' => '1']);
+        $banner = Banner::firstOrCreate(['id' => '1']);
 
     }
 
@@ -53,19 +53,31 @@ class BannerController extends Controller
     public function store(Request $request)
     {
         //banner添加图片
+        $banner = Banner::firstOrCreate(['id' => '1']);
+        $file = $request->file('image');
+        if(!$file->getClientOriginalExtension() ){ return "error";}
+        $arr  = $this->storeWithThumbnail($request,'image');
+        $newname = $arr[1];
+        $thumbname =$arr[0];
 
-        $banner = App\Banner::firstOrCreate(['id' => '1']);
-
-        $picture =new App\Picture([
+        $picture =new Picture([
             'location' =>$newname,
             'thumbnail'=>$thumbname,
         ]);
         $banner->pictures()->save($picture);
+        $picList = $banner->pictures();
+        return response()->json(
+            [ 'status'=>'succecess',
+                'action'=>'refresh',
+                'picList'=>$picList,
+                'newname'=>$newname,
+                'thumbnail'=>$thumbname
+            ]
+        );
     }
 
     /**
      * Display the specified resource.
-     *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */

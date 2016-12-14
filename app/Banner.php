@@ -13,9 +13,6 @@ class Banner extends Model
      */
     protected $fillable = ['name'];
 
-
-
-
     /*
      * Get all of the banner pictures
      */

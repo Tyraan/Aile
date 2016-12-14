@@ -5,12 +5,14 @@ use App\Banner;
 use Illuminate\Http\Request;
 use Input;
 
+
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\BannerController;
 
 class tryController extends Controller
 {
-    
+    use \App\Http\Controllers\Traits\ImageTrait;
+
     public function index()
     {
         
