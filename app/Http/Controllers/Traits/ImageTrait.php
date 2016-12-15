@@ -2,6 +2,7 @@
 namespace  App\Http\Controllers\Traits;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManagerStatic as Image;
+use Storage;
 
 trait ImageTrait
 {
@@ -29,8 +30,16 @@ trait ImageTrait
         return [$thumbname,$newname];
     }
 
-    function removeWithThumbnail(){
-
+    function removeWithThumbnail($name){
+        $thumbname = 'thumbnail_'.$name;
+        $path = join(DIRECTORY_SEPARATOR,['image','banner',$name]);
+        $thumbpath = join(DIRECTORY_SEPARATOR,['image','banner',$thumbname]);
+        if(is_file($path)){
+            Storage::delete(
+                [$path,
+                $thumbpath]
+            );
+        }
     }
 
 

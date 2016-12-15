@@ -117,8 +117,26 @@ class BannerController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
-       Picture::destory($id);
+    {   $picList = Banner::firstOrCreate(['id' => '1'])->pictures();
+        if ($picture = Picture::findOrFail($id)) {
+            $this->removeWithThumbnail($picture->location);
+            $picture->delete();
+            return response()->json(
+                [
+                    'status' => 'succecess',
+                    'action' => 'refresh',
+                    'piclist' => $picList
+                ]
+            );
+        }else{
+            return response()->json(
+                [
+                    'status'=>'unsccecesful',
+                    'action'=>'refresh',
+                    'picList'=>$picList
+                ]
+            );
+        }
 
 
     }

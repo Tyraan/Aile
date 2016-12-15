@@ -5,8 +5,6 @@
  * sendImage function ：用ajax 传送图片到后台。
  * todo: 需要把sendImage 模块化，以方便复用。
  * */
-
-
 /*
  *  param:None
  *
@@ -34,6 +32,8 @@ function sendImage(){
                 $("input[name='image']").val("");
                 alert(a+b);
 
+
+
             }
         });
 
@@ -44,26 +44,36 @@ function sendImage(){
 }
 
 /*
-*
+*  向admin/banner 发送DELTE请求
+*  @param  id  int
+*  return json
 * */
-function delteImage($id) {
-    var fm = new FormData();
+function deleteImage($id) {
     $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
-    fm.append('id'=>$id);
-    $.ajax(
-        {
-            url: 'admin/banner',
-            type: 'POST',
-            data:fm,
+    url = 'admin/banner/'
+
+    $.ajax({
+            url: 'admin/banner/'+$id
+        ,
+            type: 'DELETE',
+            data:{
+                id:$id,
+            },
             success:function (returnJson) {
                 var a = "status :" + returnJson.status;
                 var b = " action : "+ returnJson.action;
+
                 $("input[name='image']").val("");
                 alert(a+b);
 
             }
-        }
-    )
+        });
 
 
+}
+
+
+var action ={
+     refresh :function () {
+     }
 }

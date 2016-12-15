@@ -16,8 +16,8 @@
     <div class="show-bannerimage">
     @if(isset($pictures))
         @foreach ($pictures as $pic)
-            <img src={{ "/public/image/banner/".$pic->thumbnail }}></img>
-            <button type = "button" class = 'btn btn-small' onClick ='deleteImage()'></button>
+            <img src={{ "/image/banner/".$pic->thumbnail }}></img>
+            <button type = "button" class = 'btn btn-small' onClick ={{ "deleteImage(".$pic->id.")" }} value={{ $pic->id }}>删除该banner图</button>
         @endforeach
     @endif
     </div>
