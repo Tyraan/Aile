@@ -30,7 +30,6 @@ function sendImage(){
                 var a = "status :" + returnJson.status;
                 var b = " action : "+ returnJson.action;
                 $("input[name='image']").val("");
-                alert(a+b);
 
 
 
@@ -62,9 +61,8 @@ function deleteImage($id) {
             success:function (returnJson) {
                 var a = "status :" + returnJson.status;
                 var b = " action : "+ returnJson.action;
-
                 $("input[name='image']").val("");
-                alert(a+b);
+
 
             }
         });
@@ -75,5 +73,27 @@ function deleteImage($id) {
 
 var action ={
      refresh :function () {
+     },
+
+     addImage:function (returnjson) {
+         var picId = returnjson.picId;
+         var picname = returnjson.picName;
+         var divattr = {
+             'class':"col-md-1",
+             "id":"showpic"+,
+         };
+         var imgattr = {
+             'id':'pic'+picId,
+             'src':"/image/banner/"+picName
+         };
+         var btnattr = {
+             "type" :"button",
+             'class':"btn btn-small",
+             "onClick":"deleteImage("+picId+")",
+             "value":picId,
+         };
+         var div = $("<div />").attr(divattr);
+         $("<img />").attr(imgattr).appendTo(div);
+         $("<button />").attr(btnattr).html("删除该banner图").appendTo(div);
      }
 }

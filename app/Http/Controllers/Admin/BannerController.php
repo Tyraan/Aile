@@ -65,13 +65,12 @@ class BannerController extends Controller
             'thumbnail'=>$thumbname,
         ]);
         $banner->pictures()->save($picture);
-        $picList = $banner->pictures();
+
         return response()->json(
             [ 'status'=>'succecess',
-                'action'=>'refresh',
-                'picList'=>$picList,
-                'newname'=>$newname,
-                'thumbnail'=>$thumbname
+                'action'=>'addImage',
+                'picName' =>$thumbname,
+                'pidId' =>$picture->id,
             ]
         );
     }
@@ -124,8 +123,8 @@ class BannerController extends Controller
             return response()->json(
                 [
                     'status' => 'succecess',
-                    'action' => 'refresh',
-                    'piclist' => $picList
+                    'action' => 'removePic',
+                    'picid' => $id,
                 ]
             );
         }else{
@@ -133,7 +132,7 @@ class BannerController extends Controller
                 [
                     'status'=>'unsccecesful',
                     'action'=>'refresh',
-                    'picList'=>$picList
+
                 ]
             );
         }

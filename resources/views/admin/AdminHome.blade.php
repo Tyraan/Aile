@@ -13,12 +13,16 @@
 <div class="main-pageadmin">
 
     <p> 首页的banner控制 </p>
-    <div class="show-bannerimage">
+    <div class="container show-bannerimage" >
+        <div class ="row" id = "showbanner" >
     @if(isset($pictures))
         @foreach ($pictures as $pic)
-            <img src={{ "/image/banner/".$pic->thumbnail }}></img>
+            <div class="col-md-1" id={{ "showpic".$pic->id }} >
+            <img id={{ "pic".$pic->id }} src={{ "/image/banner/".$pic->thumbnail }}></img>
             <button type = "button" class = 'btn btn-small' onClick ={{ "deleteImage(".$pic->id.")" }} value={{ $pic->id }}>删除该banner图</button>
+            </div>
         @endforeach
+        </div>
     @endif
     </div>
 
