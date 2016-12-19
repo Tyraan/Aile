@@ -30,9 +30,7 @@ function sendImage(){
                 var a = "status :" + returnJson.status;
                 var b = " action : "+ returnJson.action;
                 $("input[name='image']").val("");
-
-
-
+                action['addImage'](returnJson);
             }
         });
 
@@ -47,40 +45,33 @@ function sendImage(){
 *  @param  id  int
 *  return json
 * */
-function deleteImage($id) {
+function deleteImage(id) {
     $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
     url = 'admin/banner/'
-
     $.ajax({
-            url: 'admin/banner/'+$id
-        ,
+            url: 'admin/banner/'+id,
             type: 'DELETE',
             data:{
-                id:$id,
+                id:id,
             },
             success:function (returnJson) {
                 var a = "status :" + returnJson.status;
                 var b = " action : "+ returnJson.action;
-                $("input[name='image']").val("");
-
+                action["deleteImage"](id);
 
             }
         });
-
-
 }
-
-
 var action ={
      refresh :function () {
      },
 
      addImage:function (returnjson) {
          var picId = returnjson.picId;
-         var picname = returnjson.picName;
+         var picName = returnjson.picName;
          var divattr = {
              'class':"col-md-1",
-             "id":"showpic"+,
+             "id":"showpic"+picId,
          };
          var imgattr = {
              'id':'pic'+picId,
@@ -95,5 +86,11 @@ var action ={
          var div = $("<div />").attr(divattr);
          $("<img />").attr(imgattr).appendTo(div);
          $("<button />").attr(btnattr).html("删除该banner图").appendTo(div);
-     }
+         $("#showbanner").append(div);
+     },
+     deleteImage:function (id) {
+         var id = "#showpic"+id;
+         $(id).remove();
+
+     },
 }

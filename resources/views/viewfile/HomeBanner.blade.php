@@ -5,7 +5,7 @@
     <div class="child"> <a href="#"><img alt="爱乐乐享" src="/image/7th_n.jpg" /> </a></div>
     <div class="child"> <a href="#"><img alt="爱乐乐享" src="/image/fumuketang_n.jpg" /> </a></div>
 	 <div class="child"> <a href="https://shop144364600.taobao.com/"><img alt="爱乐乐享" src="/image/taobao_n.jpg" /> </a></div>
-	<div class="child"> <a href="#"><img alt="爱乐乐享" src="/image/zhangjiagang_n.jpg" /> </a></div>
+	<div class="child"> <a href="#"><img alt="爱乐乐享" src="/image/zhangjiagang_n.jpg" /></a></div>
   </div>
   <div class="nav"> <a href="javascript:;" class="now"></a> <a href="javascript:;"></a> <a href="javascript:;"></a><a href="javascript:;"></a><a href="javascript:;"></a> <a href="javascript:;"></a> </div>
 </div>
