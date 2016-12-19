@@ -18,20 +18,23 @@
     @if(isset($pictures))
         @foreach ($pictures as $pic)
             <div class="col-md-4" id={{ "showpic".$pic->id }} >
-            <img id={{ "pic".$pic->id }} src={{ "/image/banner/".$pic->thumbnail }}></img>
+            <img  class ="thumbnail" id={{ "pic".$pic->id }} src={{ "/image/banner/".$pic->thumbnail }} />
+            <lable>{{ $pic->link }}</lable>
             <button type = "button" class = 'btn btn-small' onClick ={{ "deleteImage(".$pic->id.")" }} value={{ $pic->id }}>删除该banner图</button>
             </div>
         @endforeach
         </div>
     @endif
     </div>
-
     <div class="imageform">
 
         {!! Form::open(['url'=>'admin/banner','id'=>'imageForm']) !!}
         {!! Form::label('选择要上传的 banner图 ')!!}
         {!! Form::file('image',$attributes=['type'=>'file','class'=>'btn btn-primary','buttonName'=> "btn-primary"])!!}
-        {!! Form::input($attributes=['class',]) !!}
+        <div class="input-group">
+            <span class="input-group-addon">输入banner图的网址</span>
+            <input type="text" class="form-control" placeholder="此处填入对应网址" name="bannerhref">
+        </div>
         <button type="button" class ="btn btn-success btn-lg" onClick="sendImage()" value=""> 上传该图片 </button>
         {!! Form::close() !!}
     </div>

@@ -25,7 +25,7 @@ class AddLinkToPictureTable extends Migration
      */
     public function down()
     {
-        Schema::table('=picutures', function (Blueprint $table) {
+        Schema::table('picutures', function (Blueprint $table) {
             //
         });
     }

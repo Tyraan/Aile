@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Picture extends Model
 {
     //
-    protected $fillable = ['location','thumbnail'];
+    protected $fillable = ['location','thumbnail','link'];
     /*
      * get the banner that owns the picture
      */

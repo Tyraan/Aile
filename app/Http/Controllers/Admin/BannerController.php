@@ -55,6 +55,8 @@ class BannerController extends Controller
         //banner添加图片
         $banner = Banner::firstOrCreate(['id' => '1']);
         $file = $request->file('image');
+        $href = $request->input('href');
+
         if(!$file->getClientOriginalExtension() ){ return "error";}
         $arr  = $this->storeWithThumbnail($request,'image');
         $newname = $arr[1];
@@ -63,14 +65,18 @@ class BannerController extends Controller
         $picture =new Picture([
             'location' =>$newname,
             'thumbnail'=>$thumbname,
+            'link'=> $href,
         ]);
-        $banner->pictures()->save($picture);
+        $link = $picture->link;
 
+        $banner->pictures()->save($picture);
         return response()->json(
             [ 'status'=>'succecess',
                 'action'=>'addImage',
                 'picName' =>$thumbname,
                 'pidId' =>$picture->id,
+                'link'=>$href,
+                'picturelink'=>$link,
             ]
         );
     }
@@ -106,17 +112,16 @@ class BannerController extends Controller
     public function update(Request $request, $id)
     {
         //增删改图片
-
     }
-
     /**
      * Remove the specified resource from storage.
      * 删除
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {   $picList = Banner::firstOrCreate(['id' => '1'])->pictures();
+    {
+        $picList = Banner::firstOrCreate(['id' => '1'])->pictures();
         if ($picture = Picture::findOrFail($id)) {
             $this->removeWithThumbnail($picture->location);
             $picture->delete();

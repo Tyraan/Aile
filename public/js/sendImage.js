@@ -12,6 +12,7 @@
 function sendImage(){
     var file=$("input[name='image']").val();
     var image=$("input[name='image']")[0].files[0];
+    var href = $("input[name='bannerhref']").val();
     var filename=file.replace(/.*(\/|\\)/, "");
     var fileExt=(/[.]/.exec(filename)) ? /[^.]+$/.exec(filename.toLowerCase()) : '';
     var allowExt = ['png','gif','jpg'];
@@ -19,6 +20,7 @@ function sendImage(){
         $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
         var fm = new FormData();
         fm.append('image',image);
+        fm.append('href',href);
         $.ajax({
             url:'admin/banner',
             type:"POST",
@@ -30,6 +32,7 @@ function sendImage(){
                 var a = "status :" + returnJson.status;
                 var b = " action : "+ returnJson.action;
                 $("input[name='image']").val("");
+                $("input[name='bannerhref']").val('');
                 action['addImage'](returnJson);
             }
         });
