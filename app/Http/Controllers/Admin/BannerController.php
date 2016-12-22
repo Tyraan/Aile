@@ -76,7 +76,7 @@ class BannerController extends Controller
                 'picName' =>$thumbname,
                 'pidId' =>$picture->id,
                 'link'=>$href,
-                'picturelink'=>$link,
+                'pictureLink'=>$link,
             ]
         );
     }

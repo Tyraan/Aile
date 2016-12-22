@@ -33,6 +33,7 @@ function sendImage(){
                 var b = " action : "+ returnJson.action;
                 $("input[name='image']").val("");
                 $("input[name='bannerhref']").val('');
+                console.log(b);
                 action['addImage'](returnJson);
             }
         });
@@ -72,6 +73,8 @@ var action ={
      addImage:function (returnjson) {
          var picId = returnjson.picId;
          var picName = returnjson.picName;
+
+         var picLink = returnjson.picLink;
          var divattr = {
              'class':"col-md-1",
              "id":"showpic"+picId,
@@ -88,7 +91,10 @@ var action ={
          };
          var div = $("<div />").attr(divattr);
          $("<img />").attr(imgattr).appendTo(div);
+         var link = "图片链接："+picLink;
+         $("<lable/>").html(link).appendTo(div);
          $("<button />").attr(btnattr).html("删除该banner图").appendTo(div);
+
          $("#showbanner").append(div);
      },
      deleteImage:function (id) {

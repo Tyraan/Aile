@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 	  use Illuminate\Http\Request;
+      use App\Banner;
 	        
 
 
@@ -36,7 +37,9 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('home')->with('session',session());
+        $pictures = Banner::firstOrNew(['id'=>1])->pictures;
+		return view('home',['session'=>session(),'pictures'=>$pictures]);
+
 	}
 
 	public function getStory()

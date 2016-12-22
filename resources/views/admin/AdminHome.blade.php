@@ -19,7 +19,7 @@
         @foreach ($pictures as $pic)
             <div class="col-md-4" id={{ "showpic".$pic->id }} >
             <img  class ="thumbnail" id={{ "pic".$pic->id }} src={{ "/image/banner/".$pic->thumbnail }} />
-            <lable>{{ $pic->link }}</lable>
+            <lable>图片链接：{{ $pic->link }}</lable>
             <button type = "button" class = 'btn btn-small' onClick ={{ "deleteImage(".$pic->id.")" }} value={{ $pic->id }}>删除该banner图</button>
             </div>
         @endforeach
