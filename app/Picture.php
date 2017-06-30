@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Config;
+
 
 class Picture extends Model
 {
@@ -13,5 +15,9 @@ class Picture extends Model
      */
     public function banner(){
         return $this->belongsTo(Banner::class);
+    }
+    public function getUrl(){
+        return '/image/banner/'.$this->location;
+
     }
 }

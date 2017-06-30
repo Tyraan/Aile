@@ -61,17 +61,17 @@ class BannerController extends Controller
         $arr  = $this->storeWithThumbnail($request,'image');
         $newname = $arr[1];
         $thumbname =$arr[0];
+        $link = $href;
 
         $picture =new Picture([
             'location' =>$newname,
             'thumbnail'=>$thumbname,
             'link'=> $href,
         ]);
-        $link = $picture->link;
-
         $banner->pictures()->save($picture);
         return response()->json(
-            [ 'status'=>'succecess',
+            [
+                'status'=>'succecess',
                 'action'=>'addImage',
                 'picName' =>$thumbname,
                 'pidId' =>$picture->id,
@@ -121,9 +121,11 @@ class BannerController extends Controller
      */
     public function destroy($id)
     {
-        $picList = Banner::firstOrCreate(['id' => '1'])->pictures();
-        if ($picture = Picture::findOrFail($id)) {
-            $this->removeWithThumbnail($picture->location);
+        //$picList = Banner::firstOrCreate(['id' => '1'])->pictures();
+
+        if ($picture = Picture::findOrFail($id)){
+            //先移除缩略图和本图
+            $this->removeExistPicturesFile($picture->location);
             $picture->delete();
             return response()->json(
                 [

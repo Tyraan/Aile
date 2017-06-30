@@ -71,9 +71,9 @@ var action ={
      },
 
      addImage:function (returnjson) {
+         console.log(returnjson);
          var picId = returnjson.picId;
          var picName = returnjson.picName;
-
          var picLink = returnjson.picLink;
          var divattr = {
              'class':"col-md-1",
@@ -94,7 +94,6 @@ var action ={
          var link = "图片链接："+picLink;
          $("<lable/>").html(link).appendTo(div);
          $("<button />").attr(btnattr).html("删除该banner图").appendTo(div);
-
          $("#showbanner").append(div);
      },
      deleteImage:function (id) {

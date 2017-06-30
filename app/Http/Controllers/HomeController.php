@@ -60,10 +60,7 @@ class HomeController extends Controller {
 		$child_age = floor((time()-strtotime($request->input('birthday','2016-3-17')))/31104000);
 		$child_month_age = floor((time()-strtotime($request->input('birthday','2016-3-17')))/2592000);
 
-
 		$child_month = $child_month_age %12 ;
-
-
 		$art = ArtCourse($child_month_age);
 		$music = MusicCradleCourse($child_month_age);
 		$fitbaby = FitBabyCourse($child_month_age);
@@ -71,8 +68,6 @@ class HomeController extends Controller {
 		$cookingfun = CookingFunCourse($child_month_age);
 		$letterhand = LetterLandCourse($child_month_age);
 		$watergym  = WaterGymCourse($child_month_age);
-
-
 		$arr = [
 				'courseList'=> True,
 				'birthday'=>$birthday,

@@ -10,13 +10,12 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
 Route::get('/','HomeController@index');
+
 Route::group(['prefix'=>'home',],function(){
 	Route::controller('/','HomeController'); 
 	Route::get('/','HomeController@index');	
-    }
-	);
+    });
 /*
  * 控制登陆的路由群
  **/
@@ -36,13 +35,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
 {
   Route::get('/', 'AdminHomeController@index');
   Route::resource('banner','bannerController');
-  
 });
-/*
- * 测试用路由
- */
-Route::controller("test","tryController");
-Route::resource('courseap','CourseAppointmentController');
-Route::resource('center','centerController');
 
 

@@ -6,8 +6,4 @@
   <div class="nav_bg2"></div>
   <div class="block"> <a href="#" class="logo"></a>
     <div class="tel">400-688-2011</div>
-    <div class="search">
-      <div class="box">
-        <div class="inner"><input type="search" class="kw" placeholder="请输入关键词"><input type="button" class="ok"></div>
-      </div>
 </div>

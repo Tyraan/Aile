@@ -39,5 +39,6 @@
         {!! Form::close() !!}
     </div>
 </div>
+@yield('editor')
 </body>
 </html>

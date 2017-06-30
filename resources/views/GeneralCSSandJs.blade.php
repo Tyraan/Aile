@@ -9,9 +9,6 @@
 <script src="js/plus/sHover.min.js"></script>
 <!-- 加盟和课程弹出页代码 -->
 <script type="text/javascript" charset="utf-8" src="http://lead.soperson.com/20000301/10045318.js"></script>
-
-
-
 <SCRIPT LANGUAGE="JavaScript">
 function mobile_device_detect(url)
 {

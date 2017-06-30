@@ -205,10 +205,7 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
 
     ],
-
     'uploadFolder'=>[
-        'Banner'=>"public\uploadimage",
-
-    ]
-
+        'Banner'=>"public/image/banner",
+    ],
 ];

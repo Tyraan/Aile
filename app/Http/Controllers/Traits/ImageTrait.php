@@ -30,7 +30,7 @@ trait ImageTrait
         return [$thumbname,$newname];
     }
 
-    function removeWithThumbnail($name){
+    function removeExistPicturesFile($name){
         $thumbname = 'thumbnail_'.$name;
         $path = join(DIRECTORY_SEPARATOR,['image','banner',$name]);
         $thumbpath = join(DIRECTORY_SEPARATOR,['image','banner',$thumbname]);
