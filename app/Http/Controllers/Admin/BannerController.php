@@ -56,13 +56,13 @@ class BannerController extends Controller
         $banner = Banner::firstOrCreate(['id' => '1']);
         $file = $request->file('image');
         $href = $request->input('href');
-
         if(!$file->getClientOriginalExtension() ){ return "error";}
+
         $arr  = $this->storeWithThumbnail($request,'image');
+
         $newname = $arr[1];
         $thumbname =$arr[0];
         $link = $href;
-
         $picture =new Picture([
             'location' =>$newname,
             'thumbnail'=>$thumbname,

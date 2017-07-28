@@ -5,6 +5,8 @@
   <script type="text/javascript" src = "/js/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src = "/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="/js/sendImage.js"></script>
+
+
     {{--如果使用Ajax提交POST表单,需要用到csrf--}}
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>后台管理页</title>
@@ -27,7 +29,6 @@
     @endif
     </div>
     <div class="imageform">
-
         {!! Form::open(['url'=>'admin/banner','id'=>'imageForm']) !!}
         {!! Form::label('选择要上传的 banner图 ')!!}
         {!! Form::file('image',$attributes=['type'=>'file','class'=>'btn btn-primary','buttonName'=> "btn-primary"])!!}
@@ -39,6 +40,8 @@
         {!! Form::close() !!}
     </div>
 </div>
-@yield('editor')
+        <div class="item">
+            <a href="/admin/newseditor">新闻编辑器</a>
+        </div>
 </body>
 </html>

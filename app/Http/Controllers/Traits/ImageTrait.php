@@ -18,7 +18,6 @@ trait ImageTrait
         $allowed_extensions = ["png", "jpg", "gif"];
         $file=$request->file($name);
         $randomstr = str_random(5);
-
         $newname  = $randomstr.date('Ymd',time()).".".$file->getClientOriginalExtension();
         $thumbname = 'thumbnail_'.$newname;
         if($file->getClientOriginalExtension() && !in_array($file->getClientOriginalExtension(),$allowed_extensions))
@@ -41,6 +40,11 @@ trait ImageTrait
             );
         }
     }
+
+    function storeOnePicture(Request $request, $name){
+
+    }
+
 
 
 }

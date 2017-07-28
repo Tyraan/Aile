@@ -13,4 +13,7 @@ class News extends Model
         return $this->belongsToMany('App\Center');
         
     }
+    public function pictures(){
+        return $this->hasMany('App\Picture');
+    }
 }
