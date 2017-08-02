@@ -16,8 +16,8 @@ class Picture extends Model
     public function banner(){
         return $this->belongsTo(Banner::class);
     }
-    public function getUrl(){
-        return '/image/banner/'.$this->location;
-
+    public function news(){
+        return $this->belongsTo(News::class);
     }
+
 }

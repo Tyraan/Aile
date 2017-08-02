@@ -8,6 +8,9 @@ use Input;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\BannerController;
+use App\Picture;
+use PhpSpec\Process\ReRunner\PcntlReRunner;
+use Illuminate\Support\Facades\Storage;
 
 class tryController extends Controller
 {
@@ -15,21 +18,23 @@ class tryController extends Controller
 
     public function index()
     {
-        
-        return view("test",['name' => "index"]);
+
+        return view("test",[]);
+
     }   
     public function anyTest($id)
     {
-        return view("test");
+        //return view("test",);
+
 
     }
 
     public function anyIndex(Request $request)
 
     {
-        $input = Input::all();   
-        return view("test",['name'=>$input]);
-
+        $input = Input::all();
+        $allPics = Storage::allfiles('image/temp');
+        return view("test",['name'=>$input, 'allPics'=>$allPics ]);
     }
     public function test(Request $request){
         return 0;
@@ -82,8 +87,6 @@ Comes back and begs me to catch her every time she falls";
 
 
     public function postUpdate(Request $request){
-
-
 
         return response()->json(['status' => 'img saved', 'action' => 'refresh table']);
 

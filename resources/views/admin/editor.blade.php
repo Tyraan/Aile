@@ -26,8 +26,15 @@
     <title></title>
 </head>
 <body>
+
+<div class="page-header" id="header">
+    <h1>新闻文本编辑</h1>
+</div>
+
+
 <div>
     <form action="{{ url('/admin/newseditor') }}" name="news_form" method="post">
+        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
     <div class="input-group">
         <span class="input-group-addon">文章标题</span>
         <input type="text" class="form-control" name="caption">
@@ -45,11 +52,11 @@
             }
         });
     </script>
-        <input id="fat-btn" class="btn btn-primary btn-lg" data-loading-text="提交中..."
-                type="submit" form="news_form"style="float:right" > 提交文章
-        </input>
-    </form>
+        <div style="float:right">
 
+        <button type="submit" class="btn btn-lg btn-primary"><span class="glyphicon-th-list glyphicon glyphicon-ok" ></span> 提交文章</button>
+        </div>
+    </form>
 </div>
 
 
