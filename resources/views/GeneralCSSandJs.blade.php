@@ -1,12 +1,12 @@
-<link rel="stylesheet" type="text/css" href="css/global.css" />
-<link rel="stylesheet" type="text/css" href="css/page.css" />
+<link rel="stylesheet" type="text/css" href="/css/global.css" />
+<link rel="stylesheet" type="text/css" href="/css/page.css" />
 <script src="/js/jquery-1.7.2.min.js"></script>
 <script src="/js/jquery.easing.1.3.js"></script>
 <script src="/js/jquery.transit.min.js"></script>
 <script src="/js/fun.js"></script>
 <script src="/js/global.js"></script>
-<script src="js/plus/jquery.mScroll.js"></script>
-<script src="js/plus/sHover.min.js"></script>
+<script src="/js/plus/jquery.mScroll.js"></script>
+<script src="/js/plus/sHover.min.js"></script>
 <!-- 加盟和课程弹出页代码 -->
 <script type="text/javascript" charset="utf-8" src="http://lead.soperson.com/20000301/10045318.js"></script>
 <SCRIPT LANGUAGE="JavaScript">

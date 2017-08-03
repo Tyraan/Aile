@@ -64,6 +64,14 @@ POSTCONTENT;
     @endforeach
 
 </div>
+<div>
+    <p>
+        {{ $validator or 'no  validator' }}
+    </p>
+    <p>
+        {{  $error  or ' no error'   }}
+    </p>
+</div>
 
 
 

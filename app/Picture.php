@@ -19,5 +19,11 @@ class Picture extends Model
     public function news(){
         return $this->belongsTo(News::class);
     }
+    /*
+     * 在viwe 中使用，返回banner图的url
+     */
+    public function getUrl(){
+        return '/image/banner/'.$this->location;
+    }
 
 }

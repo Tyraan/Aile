@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Page;
 use App\Banner;
+use App\News;
 
 class AdminHomeController extends Controller {
 
@@ -19,8 +20,11 @@ class AdminHomeController extends Controller {
 	{
 		$pictures = Banner::firstOrNew(['id'=>1])->pictures;
 
-		return view('admin.AdminHome')->with('pictures',$pictures);
+		$news = News::all();
+
+		return view('admin.AdminHome')->with(['pictures'=>$pictures,'news'=>$news]);
 	}
+
 
 	/**
 	 * Show the form for creating a new resource.
