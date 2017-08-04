@@ -93,26 +93,19 @@
     </div>
   </div>
 </div>
-
-
 <div class="shadow"></div>
 <div class="layer layer1"><a href="javascript:;" class="close" onClick="hidelayer('.layer1')"></a>
-    <div class="inner">
+  <div class="inner">
     <div class="list">
       <div class="tit">
         <h3>video</h3>
         <p>和孩子一起快乐的享受每一天吧!</p>
-      </div>     
+      </div>
       <div class="video">
 
-       <object class="" id="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="760" height="500">
-              <param name="movie" value="/templates/default/flvplayer.swf">
-              <param name="quality" value="high">
-              <param name="allowFullScreen" value="true">
-              <param name="FlashVars" value="vcastr_file=/templates/default/images/lfjysp.flv&amp;BufferTime=3&amp;IsAutoPlay=1">
-              <embed src="/templates/default/flvplayer.swf" allowfullscreen="true" flashvars="vcastr_file=images/1234.flv&amp;IsAutoPlay=1" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1060" height="564">
-            </object>
-</div>        
-     </div>
+        <video controls loop poster="/templates/default/home0.jpg" width="760" height="500">
+          <source src="/video/aile.mp4" type="video/mp4">
+      </div>
+    </div>
   </div>
-  </div>
+</div>

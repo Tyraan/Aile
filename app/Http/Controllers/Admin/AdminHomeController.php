@@ -20,7 +20,7 @@ class AdminHomeController extends Controller {
 	{
 		$pictures = Banner::firstOrNew(['id'=>1])->pictures;
 
-		$news = News::all();
+		$news = News::orderBy('id', 'desc')->paginate(20);
 
 		return view('admin.AdminHome')->with(['pictures'=>$pictures,'news'=>$news]);
 	}
@@ -89,5 +89,9 @@ class AdminHomeController extends Controller {
 	{
 		//
 	}
+
+	public function getNews(){
+
+    }
 
 }

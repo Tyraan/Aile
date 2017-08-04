@@ -44,12 +44,13 @@
             <h3>
             <a href="/admin/newseditor">新闻编辑器</a>
             </h3>
-            <ol>@if( isset($news))
+            <>
+                @if( isset($news))
                 @foreach($news as $new)
                 <li>{{ $new->caption }}</li>
                 @endforeach
                 @endif
-            </ol>
+            </>
         </div>
 
 

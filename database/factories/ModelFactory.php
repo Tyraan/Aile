@@ -20,9 +20,20 @@ $factory->define(App\User::class, function ($faker) {
     ];
 });
 
-$factory->define(App\News::class, function (){
+$factory->define(App\News::class, function ($faker){
+    $content1= <<<CONTENT
+<p><img alt="TIM截图20170721141710.png" src="/image/news/wVpLu20170804.png" width="1354" height="643"></p>
+CONTENT;
+    $content = $content1.$faker->text;
     return [
-        'caption' =>"testtesttest",
-        'content' =>"contentcontenttest"
+        'caption' =>$faker->name,
+        'content' =>$content
+    ];
+});
+
+$factory->define(App\Picture::class, function (Faker\Generator $faker){
+    return [
+        'location'=>"VpLu20170804.png",
+        'link'=>'None'
     ];
 });

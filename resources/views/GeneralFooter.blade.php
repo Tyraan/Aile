@@ -70,18 +70,3 @@
   </div>
 </div>
 <div class="shadow"></div>
-<div class="layer layer1"><a href="javascript:;" class="close" onClick="hidelayer('.layer1')"></a>
-  <div class="inner">
-    <div class="list">
-      <div class="tit">
-        <h3>video</h3>
-        <p>和孩子一起快乐的享受每一天吧!</p>
-      </div>
-      <div class="video">
-
-        <video controls loop poster="/templates/default/home0.jpg" width="760" height="500">
-          <source src="/templates/default/video/aile.mp4" type="video/mp4">
-      </div>
-    </div>
-  </div>
-</div>

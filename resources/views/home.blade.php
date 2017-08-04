@@ -27,7 +27,6 @@
     @include('viewfile/HomeJoinFind')
     @include('viewfile/HomeAdvertise')
     @include('viewfile/HomeEvent')
-    @include('viewfile/HomeFooter')
     @include('GeneralFooter')
 </body>
 </html>
