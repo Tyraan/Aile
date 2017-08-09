@@ -53,7 +53,6 @@
         });
     </script>
         <div style="float:right">
-
         <button type="submit" class="btn btn-lg btn-primary"><span class="glyphicon-th-list glyphicon glyphicon-ok" ></span> 提交文章</button>
         </div>
     </form>

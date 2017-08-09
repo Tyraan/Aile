@@ -6,7 +6,6 @@
   <script type="text/javascript" src = "/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="/js/sendImage.js"></script>
 
-
     {{--如果使用Ajax提交POST表单,需要用到csrf--}}
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>后台管理页</title>
@@ -41,19 +40,17 @@
     </div>
 </div>
         <div class="item">
-            <h3>
-            <a href="/admin/newseditor">新闻编辑器</a>
-            </h3>
-            <>
+                <a href="/admin/newseditor"  ><button class="btn-primary btn-lg"> 编辑一篇新闻</button></a>
+
+            <div class="">
                 @if( isset($news))
                 @foreach($news as $new)
-                <li>{{ $new->caption }}</li>
+                    <div class="list-group-item" id="newsDiv{{ $new->id }}">
+                        <a href="/news/{{ $new->id }}" >{{ $new->caption }}</a> <button onclick="deleteNews({{ $new->id }})" class="pull-right btn btn-danger ">删除该新闻</button>
+                    </div>
                 @endforeach
                 @endif
-            </>
+            </div>
         </div>
-
-
-
 </body>
 </html>
