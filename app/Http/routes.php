@@ -28,13 +28,23 @@ Route::controllers([
     'password' => 'Auth\PasswordController',
 ]);
 
+Route::resource('news', 'NewsController',
+    ['only'=> ['index', 'show']
+    ]);
+
 /*
- * 管理用路由
+ * 管理用路由, 所有内容均属于 /admin 后，必须以管理员权限登陆
 */
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function()
 {
   Route::get('/', 'AdminHomeController@index');
   Route::resource('banner','bannerController');
+  Route::resource('newseditor','EditorController');
+  Route::post('newseditor/image','EditorController@image');
+  Route::resource('city', 'cityController');
 });
 
-
+/*
+ * 测试用路由
+ */
+Route::controller('test', 'tryController');

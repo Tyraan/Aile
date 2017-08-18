@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Banner;
@@ -69,16 +68,14 @@ class BannerController extends Controller
             'link'=> $href,
         ]);
         $banner->pictures()->save($picture);
-        return response()->json(
-            [
+        return response()->json([
                 'status'=>'succecess',
                 'action'=>'addImage',
                 'picName' =>$thumbname,
                 'pidId' =>$picture->id,
                 'link'=>$href,
                 'pictureLink'=>$link,
-            ]
-        );
+            ]);
     }
 
     /**
@@ -119,9 +116,8 @@ class BannerController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //$picList = Banner::firstOrCreate(['id' => '1'])->pictures();
+    public function destroy($id)   {
+
 
         if ($picture = Picture::findOrFail($id)){
             //先移除缩略图和本图

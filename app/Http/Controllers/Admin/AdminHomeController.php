@@ -4,10 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+
 use App\Page;
 use App\Banner;
 use App\News;
+use App\City;
 
 class AdminHomeController extends Controller {
 
@@ -19,10 +20,9 @@ class AdminHomeController extends Controller {
 	public function index()
 	{
 		$pictures = Banner::firstOrNew(['id'=>1])->pictures;
-
 		$news = News::orderBy('id', 'desc')->paginate(10);
-
-		return view('admin.AdminHome')->with(['pictures'=>$pictures,'news'=>$news]);
+		$cities = City::all();
+		return view('admin.AdminHome')->with(['pictures'=>$pictures,'news'=>$news, 'cities'=>$cities ]);
 	}
 
 

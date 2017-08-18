@@ -1,80 +1,50 @@
-<!DOCTYPE HTML5>
-<html lang="en-US">
+<!doctype html>
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{--如果使用Ajax提交POST表单,需要用到csrf--}}
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>test page</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-     <script type="text/javascript" src = "/js/jquery-3.1.1.min.js"></script>
-     <script type="text/javascript" src = "/js/bootstrap.min.js"></script>
-     <script type="text/javascript" src="/js/test.js" ></script>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
 </head>
 <body>
-<div class="page-header"></div>
-<div>
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <h1>正则表达式练习</h1>
-            </div>  
-  <h4>
-      <?php
-      $matches=[];
-
-      $pattern = "/<img [^>]+ src=[^>]+\/(([[:alnum:]]+)\.(png|gif|jpg|bmp))[^>]+>/";
-      $content = <<<POSTCONTENT
-<p>some test test&nbsp;some test test&nbsp;some test test&nbsp;some test test&nbsp;<br></p><p><br></p><p><img alt="QQ截图20170425110715.png" src="/image/temp/yLzrj20170802.png" width="550" height="517"><br></p><p>some test test&nbsp;some test test&nbsp;some test test&nbsp;some test test&nbsp;some test test&nbsp;some test test&nbsp;some test test&nbsp;<br></p>
-<p>some test test&nbsp;some test test&nbsp;some test test&nbsp;some test test&nbsp;<br></p><p><br></p><p><img alt="QQ截图20170425110715.png" src="/image/temp/yLzrj20173231.png" width="550" height="517"><br></p><p>some test test&nbsp;some test test&nbsp;some test test&nbsp;some test test&nbsp;some test test&nbsp;some test test&nbsp;some test test&nbsp;<br></p>
-<p>some test test&nbsp;some test test&nbsp;some test test&nbsp;some test test&nbsp;<br></p><p><br></p><p><img alt="QQ截图20170425110715.png" src="/image/temp/yLzrj2017312211.png" width="550" height="517"><br></p><p>some test test&nbsp;some test test&nbsp;some test test&nbsp;some test test&nbsp;some test test&nbsp;some test test&nbsp;some test test&nbsp;<br></p>
-POSTCONTENT;
-      preg_match_all($pattern, $content, $matches, PREG_OFFSET_CAPTURE);
-      var_dump($matches);
-      $arr =[];
-      foreach ( $matches[0] as $ms){
-          $arr[]=get_src($ms[0]);
-      }
-      var_dump($arr);
-      $drr= [];
-      foreach ($arr as $a){
-          $drr[] = get_img_name($a[0]);
-      }
-      var_dump($drr);
-      function get_src($somestr){
-          $pattern = '/src="[^.]+[\.](png|jpg|gif|bmp)"/';
-          preg_match($pattern, $somestr, $m);
-          return $m;
-      }
-      function get_img_name($somestr){
-          $arr = explode('/', $somestr);
-          return end($arr);
-        }
-      ?>
-</h4>
+<div class="container">
+    <h2>爱乐后台</h2>
+    <p></p>
+    <ul class="nav nav-tabs nav-pills">
+        <li class="active"><a data-toggle="tab" href="#home">首页</a></li>
+        <li><a data-toggle="tab" href="#menu1">菜单 1</a></li>
+        <li><a data-toggle="tab" href="#menu2">菜单 2</a></li>
+        <li><a data-toggle="tab" href="#menu3">菜单 3</a></li>
+    </ul>
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <h3>首页</h3>
+            <p>菜鸟教程 —— 学的不仅是技术，更是梦想！！！</p>
         </div>
-    </nav>
+        <div id="menu1" class="tab-pane fade">
+            <h3>菜单 1</h3>
+            <p>这是菜单 1 显示的内容。这是菜单 1 显示的内容。这是菜单 1 显示的内容。</p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <h3>菜单 2</h3>
+            <p>这是菜单 2 显示的内容。这是菜单 2 显示的内容。这是菜单 2 显示的内容。</p>
+        </div>
+        <div id="menu3" class="tab-pane fade">
+            <h3>aaaaa</h3>
+            <p>这是菜单 3 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa。</p>
+        </div>
+    </div>
 </div>
-
-<div>
-    <p><h3>文件判断</h3></p>
-    @foreach($allPics as $pic)
-        <p>{{ $pic }}</p>
-    @endforeach
-
-</div>
-<div>
-    <p>
-        {{ $validator or 'no  validator' }}
-    </p>
-    <p>
-        {{  $error  or ' no error'   }}
-    </p>
-</div>
-
-
-
 
 </body>
+
 </html>

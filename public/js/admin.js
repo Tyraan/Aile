@@ -61,6 +61,7 @@ function deleteImage(id) {
             success:function (returnJson) {
                 var a = "status :" + returnJson.status;
                 var b = " action : "+ returnJson.action;
+
                 action["deleteImage"](id);
 
             }
@@ -73,7 +74,7 @@ var action ={
      refresh :function () {
      },
      addImage:function (returnjson) {
-         console.log(returnjson);
+
          var picId = returnjson.picId;
          var picName = returnjson.picName;
          var picLink = returnjson.picLink;
@@ -129,4 +130,60 @@ function deleteNews(id) {
 function removeNewsEle(id){
     var newId = "#newsDiv"+id;
     $(newId).remove();
+}
+
+function addNewCity(){
+    var cityname = $("input[name='city']").val();
+    $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
+    $.ajax({
+        url: 'admin/city',
+        type: "POST",
+        data:{
+            cityname:cityname,
+        },
+        success:function (returnJson) {
+
+            if(returnJson.status == 'success'){
+
+                $("input[name='city']").val("输入城市名")
+                addCitySpan(returnJson.cityname,returnJson.id);
+            }else{
+                alert(returnJson.message);
+                console.log(returnJson);
+            }
+        }
+    });
+}
+
+
+function addCitySpan(name,id) {
+    var div = $("div[name='cities']");
+    var divId = "cityDiv"+id;
+    var click = "deleteCity("+id+")";
+    var colDiv = $("<div></div>").attr({"class":"col-md-3","id":divId});
+    var h4  = $("<h4></h4>").html(name);
+    var button = $("<button></button>").attr({"class":"label label-success", "onclick":click}).html("点击删除");
+    h4.append(button);
+    colDiv.append(h4);
+    div.append(colDiv);
+}
+
+function deleteCity(id) {
+    $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
+    $.ajax(
+        {
+            url:"admin/city/"+id,
+            method:"DELETE",
+            data:{
+                id:id,
+            },
+            success:function (returnJson) {
+                removeCitySpan(returnJson.id)
+            }
+        }
+    );
+}
+
+function removeCitySpan(id) {
+    $("#cityDiv"+id).remove();
 }

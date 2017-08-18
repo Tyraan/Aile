@@ -36,7 +36,7 @@ class PagesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
 		$this->validate($request, [
 				'title'=>'require|unique:pages|max:255',

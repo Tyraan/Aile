@@ -4,16 +4,23 @@
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
   <script type="text/javascript" src = "/js/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src = "/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="/js/sendImage.js"></script>
-
+  <script type="text/javascript" src="/js/admin.js"></script>
     {{--如果使用Ajax提交POST表单,需要用到csrf--}}
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>后台管理页</title>
 </head>
 <body>
-<div class="main-pageadmin">
-
-    <p> 首页的banner控制 </p>
+<div class="container-fluid">
+    <h1>爱乐网站管理台</h1>
+    <ul class="nav nav-tabs nav-pills">
+        <li class="active"><a data-toggle="tab" href="#home">首页控制</a></li>
+        <li><a data-toggle="tab" href="#menu1">新闻管理</a></li>
+        <li><a data-toggle="tab" href="#menu2"> 中心管理</a></li>
+        <li><a data-toggle="tab" href="#menu3"> 查看数据</a></li>
+    </ul>
+<div class="tab-content" >
+<div class="tab-pane fade in active" id="home">
+    <h2> 首页的banner图控制 </h2>
     <div class="container show-bannerimage" >
         <div class ="row" id = "showbanner" >
     @if(isset($pictures))
@@ -39,7 +46,7 @@
         {!! Form::close() !!}
     </div>
 </div>
-        <div class="item">
+    <div class="tab-pane fade" id="menu1">
                 <a href="/admin/newseditor"  ><button class="btn-primary btn-lg"> 编辑一篇新闻</button></a>
 
             <div class="">
@@ -51,6 +58,12 @@
                 @endforeach
                 @endif
             </div>
-        </div>
+    </div>
+    <div class="tab-pane fade" id="menu2">
+        @include("admin.centers")
+    </div>
+
+</div>
+</div>
 </body>
 </html>
